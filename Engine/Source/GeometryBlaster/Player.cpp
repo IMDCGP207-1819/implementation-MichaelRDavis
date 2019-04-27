@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Player.h"
 #include "GameObject/Components/SpriteComponent.h"
+#include "Bullet.h"
 
 Player::Player()
 {

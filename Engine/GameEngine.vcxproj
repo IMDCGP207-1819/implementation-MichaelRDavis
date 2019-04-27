@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Source\GeometryBlaster\Bullet.h" />
     <ClInclude Include="Source\GeometryBlaster\Player.h" />
     <ClInclude Include="Source\Runtime\Core\GameApp.h" />
     <ClInclude Include="Source\Runtime\Core\Renderer.h" />
@@ -89,6 +90,7 @@
     <ClInclude Include="Source\Runtime\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\GeometryBlaster\Bullet.cpp" />
     <ClCompile Include="Source\GeometryBlaster\Player.cpp" />
     <ClCompile Include="Source\Runtime\Core\GameApp.cpp" />
     <ClCompile Include="Source\Runtime\Core\Renderer.cpp" />

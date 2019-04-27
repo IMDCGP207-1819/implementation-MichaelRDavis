@@ -3,19 +3,15 @@
 #include "GameObject/Entity.h"
 
 class SpriteComponent;
-class Bullet;
 
-class Player : public Entity
+class Bullet : public Entity
 {
 public:
-	Player();
-	~Player();
+	Bullet();
+	~Bullet();
 
 	void Update(float deltaTime) override;
 
 private:
 	std::unique_ptr<SpriteComponent> m_sprite;
-	std::unique_ptr<Bullet> m_bullet;
-	float m_playerSpeed;
-	float m_fireRate;
 };
