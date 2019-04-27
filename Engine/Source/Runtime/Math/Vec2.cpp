@@ -18,6 +18,16 @@ Vec2::Vec2(const Vec2& vec)
 	Vec2(vec.x, vec.y);
 }
 
+float Vec2::Size() const
+{
+	return sqrt(SizeSquared());
+}
+
+float Vec2::SizeSquared() const
+{
+	return (x * x + y * y);
+}
+
 Vec2 Vec2::operator+(const Vec2& vec)
 {
 	return Vec2(x + vec.x, y + vec.y);

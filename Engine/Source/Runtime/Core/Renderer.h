@@ -12,6 +12,16 @@ public:
 	/** Default destructor. */
 	~Renderer();
 
+	/**  */
+	static Renderer* Instance()
+	{
+		if (!m_gRenderer)
+		{
+			m_gRenderer = new Renderer;
+		}
+		return m_gRenderer;
+	}
+
 	/** Initialize the renderer object. */
 	void Initialize(SDL_Window* window);
 
@@ -30,4 +40,7 @@ public:
 private:
 	/** Pointer to the SDL_Renderer. */
 	SDL_Renderer* m_pRenderer;
+
+	/** Global instance */
+	static Renderer* m_gRenderer;
 };

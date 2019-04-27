@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Renderer.h"
 
+Renderer *Renderer::m_gRenderer = nullptr;
+
 Renderer::Renderer()
 {
 	m_pRenderer = nullptr;
