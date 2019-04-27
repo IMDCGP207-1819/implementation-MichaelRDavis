@@ -21,7 +21,7 @@ void SpriteComponent::InitializeComponent()
 
 }
 
-void SpriteComponent::UpdateComponent()
+void SpriteComponent::UpdateComponent(float deltaTime)
 {
 
 }

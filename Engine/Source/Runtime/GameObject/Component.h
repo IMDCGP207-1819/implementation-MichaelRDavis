@@ -11,4 +11,26 @@ public:
 
 	/** Default destructor. */
 	virtual ~Component();
+
+	/**  */
+	virtual void InitializeComponent();
+
+	/**  */
+	virtual void UpdateComponent(float deltaTime);
+
+	/** Enable this component. */
+	void EnableComponent();
+
+	/** Disable this component. */
+	void DisableComponent();
+
+	/** Returns true if this component is active. */
+	inline bool GetIsActive() const
+	{
+		return true;
+	}
+
+protected:
+	/** Is this component active */
+	bool m_isActive;
 };

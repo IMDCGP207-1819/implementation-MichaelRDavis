@@ -18,10 +18,10 @@ public:
 	void LoadTexture(const std::string& filePath);
 
 	/**  */
-	void InitializeComponent();
+	void InitializeComponent() override;
 
 	/**  */
-	void UpdateComponent();
+	void UpdateComponent(float deltaTime) override;
 
 	/**  */
 	void Draw(SDL_Renderer* renderer);
