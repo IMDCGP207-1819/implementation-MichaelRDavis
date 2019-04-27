@@ -3,7 +3,7 @@
 
 Entity::Entity()
 {
-
+	m_isActive = true;
 }
 
 Entity::~Entity()

@@ -16,13 +16,13 @@ public:
 	/** Default destructor. */
 	virtual ~Entity();
 
-	/**  */
+	/** Initialize the entity. */
 	virtual void Initialize();
 
-	/**  */
+	/** Update this entity, called once per frame. */
 	virtual void Update(float deltaTime);
 
-	/**  */
+	/** Draw this entity. */
 	virtual void Draw(SDL_Renderer* renderer);
 
 	/** Add a component to this entity. */
@@ -41,14 +41,19 @@ public:
 		return nullptr;
 	}
 
+	/** Set a new position for the entity. */
 	void SetPosition(Vec2 newPosition);
+
+	/** Set a new velocity for the entity. */
 	void SetVelcity(Vec2 newVelocity);
 
+	/** Returns the position of the entity. */
 	inline Vec2 GetPosition() const
 	{
 		return m_position;
 	}
 
+	/** Returns the velocity of the entity. */
 	inline Vec2 GetVelocity() const
 	{
 		return m_velocity;
@@ -69,7 +74,7 @@ public:
 	/** Disable this entity. */
 	void Disable();
 
-	/** Retunrs the active state of this entity. */
+	/** Returns the active state of this entity. */
 	inline bool GetIsActive() const
 	{
 		return m_isActive;
