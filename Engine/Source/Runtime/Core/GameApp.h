@@ -2,6 +2,13 @@
 
 class Renderer;
 
+/** Mode the window is currently in */
+enum EWindowMode
+{
+	EFullscreen,
+	EWindowed,
+};
+
 /**
  * Abstraction layer for a game application.
  */
@@ -45,6 +52,12 @@ private:
 	/** Pointer to the renderer. */
 	std::unique_ptr<Renderer> m_pRenderer;
 
+	/** Title of the game window. */
+	std::string m_windowTitle;
+
+	/** The windows current mode. */
+	EWindowMode m_windowMode;
+
 	/** Width of the window. */
 	int32_t m_width;
 
@@ -53,10 +66,4 @@ private:
 
 	/** True if application is currently running. */
 	bool m_isRunning;
-
-	/** Sets the application window to fullscreen mode. */
-	bool m_fullscreen;
-
-	/** Sets the application window to windowed mode. */
-	bool m_windowed;
 };
