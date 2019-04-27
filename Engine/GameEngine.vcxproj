@@ -81,6 +81,7 @@
     <ClInclude Include="Source\Runtime\Core\GameApp.h" />
     <ClInclude Include="Source\Runtime\Core\Renderer.h" />
     <ClInclude Include="Source\Runtime\GameObject\Component.h" />
+    <ClInclude Include="Source\Runtime\GameObject\Components\InputComponent.h" />
     <ClInclude Include="Source\Runtime\GameObject\Components\SpriteComponent.h" />
     <ClInclude Include="Source\Runtime\GameObject\Entity.h" />
     <ClInclude Include="Source\Runtime\GameObject\EntityManager.h" />
@@ -98,6 +99,7 @@
     <ClCompile Include="Source\Runtime\Core\GameApp.cpp" />
     <ClCompile Include="Source\Runtime\Core\Renderer.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\Component.cpp" />
+    <ClCompile Include="Source\Runtime\GameObject\Components\InputComponent.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\Components\SpriteComponent.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\Entity.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\EntityManager.cpp" />
