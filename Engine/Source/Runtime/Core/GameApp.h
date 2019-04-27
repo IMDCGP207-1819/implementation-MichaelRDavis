@@ -1,6 +1,7 @@
 #pragma once
 
 class Renderer;
+class World;
 
 /** Mode the window is currently in */
 enum EWindowMode
@@ -51,6 +52,9 @@ private:
 
 	/** Pointer to the renderer. */
 	std::unique_ptr<Renderer> m_pRenderer;
+
+	/** Pointer to the game world. */
+	std::unique_ptr<World> m_pWorld;
 
 	/** Title of the game window. */
 	std::string m_windowTitle;

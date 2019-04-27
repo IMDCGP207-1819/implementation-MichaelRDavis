@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "GameApp.h"
 #include "Renderer.h"
+#include "GameObject/World.h"
 
 GameApp::GameApp()
 {
@@ -62,6 +63,12 @@ void GameApp::Startup()
 	{
 		m_pRenderer->Initialize(m_pWindow);
 	}
+
+	m_pWorld = std::make_unique<World>();
+	if (m_pWorld)
+	{
+		m_pWorld->Initialize();
+	}
 }
 
 void GameApp::Shutdown()
@@ -74,7 +81,9 @@ void GameApp::Shutdown()
 void GameApp::Update(float deltaTime)
 {
 	ProcessEvents();
+	m_pWorld->Update(deltaTime);
 	m_pRenderer->Clear();
+	m_pWorld->Draw(m_pRenderer->GetSDLRenderer());
 	m_pRenderer->SwapBuffers();
 }
 
@@ -85,6 +94,11 @@ void GameApp::ProcessEvents()
 	{
 		switch (event.type)
 		{
+		case SDL_WINDOWEVENT:
+		{
+
+		}
+		break;
 		case SDL_QUIT:
 			m_isRunning = false;
 			Shutdown();
