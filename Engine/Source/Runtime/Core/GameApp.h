@@ -1,7 +1,9 @@
 #pragma once
 
+class Renderer;
+
 /**
- * Abstraction for a game application.
+ * Abstraction layer for a game application.
  */
 class GameApp
 {
@@ -39,6 +41,9 @@ public:
 private:
 	/** Pointer to the native window. */
 	SDL_Window* m_pWindow;
+
+	/** Pointer to the renderer. */
+	std::unique_ptr<Renderer> m_pRenderer;
 
 	/** Width of the window. */
 	int32_t m_width;

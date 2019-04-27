@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "GameApp.h"
+#include "Renderer.h"
 
 GameApp::GameApp()
 {
@@ -54,10 +55,17 @@ void GameApp::Startup()
 		SDL_SetWindowBordered(m_pWindow, SDL_TRUE);
 		SDL_MaximizeWindow(m_pWindow);
 	}
+
+	m_pRenderer = std::make_unique<Renderer>();
+	if (m_pRenderer)
+	{
+		m_pRenderer->Initialize(m_pWindow);
+	}
 }
 
 void GameApp::Shutdown()
 {
+	SDL_DestroyRenderer(m_pRenderer->GetSDLRenderer());
 	SDL_DestroyWindow(m_pWindow);
 	SDL_Quit();
 }
@@ -65,6 +73,8 @@ void GameApp::Shutdown()
 void GameApp::Update(float deltaTime)
 {
 	ProcessEvents();
+	m_pRenderer->Clear();
+	m_pRenderer->SwapBuffers();
 }
 
 void GameApp::ProcessEvents()
