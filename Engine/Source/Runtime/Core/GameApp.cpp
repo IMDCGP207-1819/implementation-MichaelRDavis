@@ -7,6 +7,8 @@ GameApp::GameApp()
 	m_width = 0;
 	m_height = 0;
 	m_isRunning = true;
+	m_fullscreen = false;
+	m_windowed = true;
 }
 
 GameApp::~GameApp()
@@ -42,6 +44,16 @@ void GameApp::Startup()
 	{
 		printf("Could not create window: %s", SDL_GetError());
 	}
+
+	if (m_fullscreen)
+	{
+		SDL_SetWindowFullscreen(m_pWindow, SDL_TRUE);
+	}
+	else if (m_windowed)
+	{
+		SDL_SetWindowBordered(m_pWindow, SDL_TRUE);
+		SDL_MaximizeWindow(m_pWindow);
+	}
 }
 
 void GameApp::Shutdown()
@@ -52,5 +64,20 @@ void GameApp::Shutdown()
 
 void GameApp::Update(float deltaTime)
 {
+	ProcessEvents();
+}
 
+void GameApp::ProcessEvents()
+{
+	SDL_Event event;
+	while (SDL_PollEvent(&event))
+	{
+		switch (event.type)
+		{
+		case SDL_QUIT:
+			m_isRunning = false;
+			Shutdown();
+			break;
+		}
+	}
 }

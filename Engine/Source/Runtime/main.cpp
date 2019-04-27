@@ -7,7 +7,7 @@ int main()
 	try
 	{
 		game->Startup();
-		while (true)
+		while (game->GetIsRunning())
 		{
 			float deltaTime = SDL_GetTicks();
 			game->Update(deltaTime);

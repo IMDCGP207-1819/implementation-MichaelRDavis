@@ -1,7 +1,7 @@
 #pragma once
 
 /**
- * 
+ * Abstraction for a game application.
  */
 class GameApp
 {
@@ -21,6 +21,15 @@ public:
 	/** Updates the application, called once per frame. */
 	virtual void Update(float deltaTime);
 
+	/** Handles application messages. */
+	void ProcessEvents();
+
+	/** Returns true if the application is currently running. */
+	inline bool GetIsRunning() const
+	{
+		return m_isRunning;
+	}
+
 	/** Returns a pointer to the native window. */
 	inline SDL_Window* GetWindow() const
 	{
@@ -39,4 +48,10 @@ private:
 
 	/** True if application is currently running. */
 	bool m_isRunning;
+
+	/** Sets the application window to fullscreen mode. */
+	bool m_fullscreen;
+
+	/** Sets the application window to windowed mode. */
+	bool m_windowed;
 };
