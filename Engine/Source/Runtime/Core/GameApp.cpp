@@ -38,7 +38,7 @@ void GameApp::Startup()
 		m_height = displayMode.h;
 	}
 
-	uint32_t windowFlags = SDL_WINDOW_SHOWN;
+	uint32_t windowFlags = SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN;
 	m_pWindow = SDL_CreateWindow(m_windowTitle.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_width, m_height, windowFlags);
 	if (m_pWindow == nullptr)
 	{
@@ -51,6 +51,7 @@ void GameApp::Startup()
 		SDL_SetWindowFullscreen(m_pWindow, SDL_TRUE);
 		break;
 	case EWindowed:
+		SDL_SetWindowFullscreen(m_pWindow, 0);
 		SDL_SetWindowBordered(m_pWindow, SDL_TRUE);
 		SDL_MaximizeWindow(m_pWindow);
 		break;
