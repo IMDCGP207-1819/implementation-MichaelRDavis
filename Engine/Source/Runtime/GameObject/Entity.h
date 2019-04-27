@@ -75,7 +75,7 @@ public:
 		return m_isActive;
 	}
 
-private:
+protected:
 	/** The position of the entity in 2D space. */
 	Vec2 m_position;
 

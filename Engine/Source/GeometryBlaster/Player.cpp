@@ -11,3 +11,10 @@ Player::~Player()
 {
 
 }
+
+void Player::Update(float deltaTime)
+{
+	//m_velocity = m_playerSpeed * // Get movement direction from gamepad
+	m_position += m_velocity;
+	// Clamp the player position to the game viewport
+}
