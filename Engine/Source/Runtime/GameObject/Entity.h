@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Math/Vec2.h"
+
 class Component;
 
 /**
@@ -39,6 +41,19 @@ public:
 		return nullptr;
 	}
 
+	void SetPosition(Vec2 newPosition);
+	void SetVelcity(Vec2 newVelocity);
+
+	inline Vec2 GetPosition() const
+	{
+		return m_position;
+	}
+
+	inline Vec2 GetVelocity() const
+	{
+		return m_velocity;
+	}
+
 	/** Set the entity type. */
 	void SetType(const std::string& type);
 
@@ -49,6 +64,12 @@ public:
 	}
 
 private:
+	/** The position of the entity in 2D space. */
+	Vec2 m_position;
+
+	/** The movement velocity of the entity in 2D space. */
+	Vec2 m_velocity;
+
 	/** The name for this entity. */
 	std::string m_type;
 

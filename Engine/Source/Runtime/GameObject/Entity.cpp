@@ -31,6 +31,16 @@ void Entity::AddComponent(std::type_index type, Component* comp)
 	m_componentList[type] = comp;
 }
 
+void Entity::SetPosition(Vec2 newPosition)
+{
+	m_position = newPosition;
+}
+
+void Entity::SetVelcity(Vec2 newVelocity)
+{
+	m_velocity = newVelocity;
+}
+
 void Entity::SetType(const std::string& type)
 {
 	m_type = type;
