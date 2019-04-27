@@ -63,6 +63,18 @@ public:
 		return m_type;
 	}
 
+	/** Activate this entity. */
+	void Enable();
+
+	/** Disable this entity. */
+	void Disable();
+
+	/** Retunrs the active state of this entity. */
+	inline bool GetIsActive() const
+	{
+		return m_isActive;
+	}
+
 private:
 	/** The position of the entity in 2D space. */
 	Vec2 m_position;
@@ -75,4 +87,7 @@ private:
 
 	/** Map of components attached to this entity keyed to via their type. */
 	std::map<std::type_index, Component*> m_componentList;
+
+	/** Flag to activate this entity. */
+	bool m_isActive;
 };

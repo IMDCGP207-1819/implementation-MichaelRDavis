@@ -18,7 +18,10 @@ void Entity::Initialize()
 
 void Entity::Update(float deltaTime)
 {
+	if (m_isActive)
+	{
 
+	}
 }
 
 void Entity::Draw(SDL_Renderer* renderer)
@@ -44,4 +47,14 @@ void Entity::SetVelcity(Vec2 newVelocity)
 void Entity::SetType(const std::string& type)
 {
 	m_type = type;
+}
+
+void Entity::Enable()
+{
+	m_isActive = true;
+}
+
+void Entity::Disable()
+{
+	m_isActive = false;
 }
