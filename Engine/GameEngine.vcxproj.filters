@@ -42,6 +42,9 @@
     <ClInclude Include="Source\Runtime\Math\Vec2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\GeometryBlaster\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Runtime\Core\GameApp.cpp">
@@ -72,6 +75,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\Runtime\Math\Vec2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GeometryBlaster\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
