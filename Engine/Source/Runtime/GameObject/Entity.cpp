@@ -11,6 +11,21 @@ Entity::~Entity()
 
 }
 
+void Entity::Initialize()
+{
+
+}
+
+void Entity::Update(float deltaTime)
+{
+
+}
+
+void Entity::Draw(SDL_Renderer* renderer)
+{
+
+}
+
 void Entity::AddComponent(std::type_index type, Component* comp)
 {
 	m_componentList[type] = comp;

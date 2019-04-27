@@ -14,6 +14,15 @@ public:
 	/** Default destructor. */
 	virtual ~Entity();
 
+	/**  */
+	virtual void Initialize();
+
+	/**  */
+	virtual void Update(float deltaTime);
+
+	/**  */
+	virtual void Draw(SDL_Renderer* renderer);
+
 	/** Add a component to this entity. */
 	void AddComponent(std::type_index type, Component* comp);
 

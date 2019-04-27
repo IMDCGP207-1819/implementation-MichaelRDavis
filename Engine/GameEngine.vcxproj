@@ -81,6 +81,7 @@
     <ClInclude Include="Source\Runtime\GameObject\Component.h" />
     <ClInclude Include="Source\Runtime\GameObject\Components\SpriteComponent.h" />
     <ClInclude Include="Source\Runtime\GameObject\Entity.h" />
+    <ClInclude Include="Source\Runtime\GameObject\EntityManager.h" />
     <ClInclude Include="Source\Runtime\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +90,7 @@
     <ClCompile Include="Source\Runtime\GameObject\Component.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\Components\SpriteComponent.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\Entity.cpp" />
+    <ClCompile Include="Source\Runtime\GameObject\EntityManager.cpp" />
     <ClCompile Include="Source\Runtime\main.cpp" />
     <ClCompile Include="Source\Runtime\stdafx.cpp" />
   </ItemGroup>

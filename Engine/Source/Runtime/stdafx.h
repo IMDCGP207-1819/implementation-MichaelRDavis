@@ -10,3 +10,4 @@
 #include <typeindex>
 #include <typeinfo>
 #include <map>
+#include <list>

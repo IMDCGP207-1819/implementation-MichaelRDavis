@@ -12,10 +12,12 @@ int main()
 			float deltaTime = SDL_GetTicks();
 			game->Update(deltaTime);
 		}
+		game->Shutdown();
 	}
 	catch (const std::exception& exception)
 	{
 		printf("%s", exception.what());
+		game->Shutdown();
 	}
 
 	return 0;
