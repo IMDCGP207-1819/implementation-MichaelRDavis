@@ -2,6 +2,8 @@
 
 #include "GameObject/Component.h"
 
+class TextureAsset;
+
 /**
  * 
  */
@@ -21,9 +23,13 @@ public:
 	void UpdateComponent(float deltaTime) override;
 
 	/**  */
+	void CreateTexture(const std::string& texturePath);
+
+	/**  */
 	void Draw(SDL_Renderer* renderer);
 
 private:
+	std::shared_ptr<TextureAsset> m_textureAsset;
 	SDL_Texture* m_texture;
 	SDL_Color m_color;
 };
