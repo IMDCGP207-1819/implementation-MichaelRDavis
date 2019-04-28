@@ -1,11 +1,9 @@
 #pragma once
 
-#include "GameObject/SingletonObject.h"
-
 /**
  * Abstraction layer for the SDL renderer.
  */
-class Renderer : public SingletonObject<Renderer>
+class Renderer
 {
 public:
 	/** Default constructor. */
