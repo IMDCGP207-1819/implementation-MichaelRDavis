@@ -76,6 +76,8 @@ void GameApp::Startup()
 	if (m_assetManager)
 	{
 		m_assetManager->Initialize("Texture Manager");
+
+		std::shared_ptr<TextureAsset> asset = m_assetManager->Load("Content/Textures/Player.png");
 	}
 }
 
