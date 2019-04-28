@@ -71,7 +71,7 @@ void GameApp::Startup()
 		m_pWorld->Initialize();
 	}
 
-	m_assetManager = std::make_unique<AssetManager<SDL_Texture>>();
+	m_assetManager = std::make_unique<AssetManager<SDL_Surface>>();
 	if (m_assetManager)
 	{
 		m_assetManager->Initialize("Texture Manager");
@@ -92,14 +92,6 @@ void GameApp::Update(float deltaTime)
 	m_pRenderer->Clear();
 	m_pWorld->Draw(m_pRenderer->GetSDLRenderer());
 	m_pRenderer->SwapBuffers();
-}
-
-void GameApp::CreateAssets()
-{
-	if (m_assetManager)
-	{
-		// Load in our game assets here
-	}
 }
 
 void GameApp::ProcessEvents()
