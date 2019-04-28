@@ -92,7 +92,9 @@
     <ClInclude Include="Source\Runtime\Math\Vec2.h" />
     <ClInclude Include="Source\Runtime\Math\Vec3.h" />
     <ClInclude Include="Source\Runtime\Memory\MemoryAllocator.h" />
+    <ClInclude Include="Source\Runtime\Resource\Asset.h" />
     <ClInclude Include="Source\Runtime\Resource\AssetManager.h" />
+    <ClInclude Include="Source\Runtime\Resource\TextureAsset.h" />
     <ClInclude Include="Source\Runtime\stdafx.h" />
     <ClInclude Include="Source\Runtime\String\String.h" />
   </ItemGroup>
@@ -113,6 +115,8 @@
     <ClCompile Include="Source\Runtime\Math\Vec2.cpp" />
     <ClCompile Include="Source\Runtime\Math\Vec3.cpp" />
     <ClCompile Include="Source\Runtime\Memory\MemoryAllocator.cpp" />
+    <ClCompile Include="Source\Runtime\Resource\Asset.cpp" />
+    <ClCompile Include="Source\Runtime\Resource\TextureAsset.cpp" />
     <ClCompile Include="Source\Runtime\stdafx.cpp" />
     <ClCompile Include="Source\Runtime\String\String.cpp" />
   </ItemGroup>

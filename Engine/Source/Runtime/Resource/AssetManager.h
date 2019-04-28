@@ -1,10 +1,12 @@
 #pragma once
 
+#include "GameObject/SingletonObject.h"
+
 /**
  * 
  */
 template<class T>
-class AssetManager
+class AssetManager : public SingletonObject<AssetManager<T>>
 {
 public:
 	/** Default constructor. */
@@ -31,16 +33,14 @@ public:
 	}
 
 	/** Load an asset into the asset manager. */
-	std::shared_ptr<T> Load(const std::string filePath)
+	std::shared_ptr<T> Load(const std::string& filePath)
 	{
 		if (filePath.empty())
 		{
 			printf("FilePath cannot be empty");
 		}
 
-		std::string strPath = String::Normalize(filePath);
-
-		auto it = m_assetMap.find(strPath);
+		auto it = m_assetMap.find(filePath);
 		if (it != m_assetMap.end())
 		{
 			return (*it).second;

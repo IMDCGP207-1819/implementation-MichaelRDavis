@@ -2,7 +2,7 @@
 
 class Renderer;
 class World;
-
+class TextureAsset;
 template<class T>
 class AssetManager;
 
@@ -60,7 +60,7 @@ private:
 	std::unique_ptr<World> m_pWorld;
 
 	/** Pointer to the asset manager. */
-	std::unique_ptr<AssetManager<SDL_Surface>> m_assetManager;
+	std::unique_ptr<AssetManager<TextureAsset>> m_assetManager;
 
 	/** Title of the game window. */
 	std::string m_windowTitle;

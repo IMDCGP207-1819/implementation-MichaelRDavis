@@ -3,6 +3,7 @@
 #include "Renderer.h"
 #include "GameObject/World.h"
 #include "Resource/AssetManager.h"
+#include "Resource/TextureAsset.h"
 
 GameApp::GameApp()
 {
@@ -71,7 +72,7 @@ void GameApp::Startup()
 		m_pWorld->Initialize();
 	}
 
-	m_assetManager = std::make_unique<AssetManager<SDL_Surface>>();
+	m_assetManager = std::make_unique<AssetManager<TextureAsset>>();
 	if (m_assetManager)
 	{
 		m_assetManager->Initialize("Texture Manager");
