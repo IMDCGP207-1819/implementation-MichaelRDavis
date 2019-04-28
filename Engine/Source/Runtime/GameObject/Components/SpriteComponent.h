@@ -15,9 +15,6 @@ public:
 	~SpriteComponent();
 
 	/**  */
-	void LoadTexture(const std::string& filePath);
-
-	/**  */
 	void InitializeComponent() override;
 
 	/**  */

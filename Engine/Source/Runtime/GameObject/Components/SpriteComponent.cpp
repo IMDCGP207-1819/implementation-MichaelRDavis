@@ -11,11 +11,6 @@ SpriteComponent::~SpriteComponent()
 
 }
 
-void SpriteComponent::LoadTexture(const std::string& filePath)
-{
-
-}
-
 void SpriteComponent::InitializeComponent()
 {
 

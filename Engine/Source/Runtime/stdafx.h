@@ -12,5 +12,6 @@
 #include <typeinfo>
 #include <map>
 #include <list>
+#include <algorithm>
 
 #include <math.h>

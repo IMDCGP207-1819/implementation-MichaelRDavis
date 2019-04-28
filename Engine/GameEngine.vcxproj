@@ -91,7 +91,9 @@
     <ClInclude Include="Source\Runtime\Math\Vec2.h" />
     <ClInclude Include="Source\Runtime\Math\Vec3.h" />
     <ClInclude Include="Source\Runtime\Memory\MemoryAllocator.h" />
+    <ClInclude Include="Source\Runtime\Resource\AssetManager.h" />
     <ClInclude Include="Source\Runtime\stdafx.h" />
+    <ClInclude Include="Source\Runtime\String\String.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\GeometryBlaster\Bullet.cpp" />
@@ -111,6 +113,7 @@
     <ClCompile Include="Source\Runtime\Math\Vec3.cpp" />
     <ClCompile Include="Source\Runtime\Memory\MemoryAllocator.cpp" />
     <ClCompile Include="Source\Runtime\stdafx.cpp" />
+    <ClCompile Include="Source\Runtime\String\String.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
