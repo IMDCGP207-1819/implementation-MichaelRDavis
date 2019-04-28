@@ -3,6 +3,9 @@
 class Renderer;
 class World;
 
+template<class T>
+class AssetManager;
+
 /** Mode the window is currently in */
 enum EWindowMode
 {
@@ -31,6 +34,9 @@ public:
 	/** Updates the application, called once per frame. */
 	virtual void Update(float deltaTime);
 
+	/** Creates all associated game assets. */
+	void CreateAssets();
+
 	/** Handles application messages. */
 	void ProcessEvents();
 
@@ -55,6 +61,9 @@ private:
 
 	/** Pointer to the game world. */
 	std::unique_ptr<World> m_pWorld;
+
+	/** Pointer to the asset manager. */
+	std::unique_ptr<AssetManager<SDL_Texture>> m_assetManager;
 
 	/** Title of the game window. */
 	std::string m_windowTitle;

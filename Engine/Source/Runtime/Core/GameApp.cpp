@@ -2,6 +2,7 @@
 #include "GameApp.h"
 #include "Renderer.h"
 #include "GameObject/World.h"
+#include "Resource/AssetManager.h"
 
 GameApp::GameApp()
 {
@@ -69,6 +70,12 @@ void GameApp::Startup()
 	{
 		m_pWorld->Initialize();
 	}
+
+	m_assetManager = std::make_unique<AssetManager<SDL_Texture>>();
+	if (m_assetManager)
+	{
+		m_assetManager->Initialize("Texture Manager");
+	}
 }
 
 void GameApp::Shutdown()
@@ -85,6 +92,14 @@ void GameApp::Update(float deltaTime)
 	m_pRenderer->Clear();
 	m_pWorld->Draw(m_pRenderer->GetSDLRenderer());
 	m_pRenderer->SwapBuffers();
+}
+
+void GameApp::CreateAssets()
+{
+	if (m_assetManager)
+	{
+		// Load in our game assets here
+	}
 }
 
 void GameApp::ProcessEvents()
