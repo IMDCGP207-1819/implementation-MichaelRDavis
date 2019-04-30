@@ -80,6 +80,9 @@
     <ClInclude Include="Source\GeometryBlaster\Player.h" />
     <ClInclude Include="Source\Runtime\Core\GameApp.h" />
     <ClInclude Include="Source\Runtime\Core\Renderer.h" />
+    <ClInclude Include="Source\Runtime\EventSystem\Event.h" />
+    <ClInclude Include="Source\Runtime\EventSystem\EventDispatcher.h" />
+    <ClInclude Include="Source\Runtime\EventSystem\EventListener.h" />
     <ClInclude Include="Source\Runtime\GameObject\Component.h" />
     <ClInclude Include="Source\Runtime\GameObject\ComponentManager.h" />
     <ClInclude Include="Source\Runtime\GameObject\Components\InputComponent.h" />
@@ -104,6 +107,7 @@
     <ClCompile Include="Source\GeometryBlaster\Player.cpp" />
     <ClCompile Include="Source\Runtime\Core\GameApp.cpp" />
     <ClCompile Include="Source\Runtime\Core\Renderer.cpp" />
+    <ClCompile Include="Source\Runtime\EventSystem\Event.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\Component.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\ComponentManager.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\Components\InputComponent.cpp" />

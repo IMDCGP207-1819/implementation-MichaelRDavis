@@ -15,5 +15,6 @@
 #include <algorithm>
 #include <unordered_map>
 #include <cassert>
+#include <functional>
 
 #include <math.h>
