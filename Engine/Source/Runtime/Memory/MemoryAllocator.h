@@ -2,7 +2,11 @@
 
 namespace Memory
 {
-
+	/** Returns an aligned memory address. */
+	static inline void* AlignForward(void* address, uint8_t alignment)
+	{
+		return (void*)((reinterpret_cast<uintptr_t>(address) + static_cast<uintptr_t>(alignment - 1))& static_cast<uintptr_t>(~(alignment - 1)));
+	}
 }
 
 /**
@@ -15,30 +19,30 @@ public:
 	MemoryAllocator();
 
 	/** Constructor. */
-	MemoryAllocator(size_t inSize, void* ptr);
+	MemoryAllocator(size_t size, void* ptr);
 
 	/** Default destructor. */
 	~MemoryAllocator();
 
-	/**  */
-	virtual void* Allocate(size_t* inSize, uint8_t alignment) = 0;
+	/** Allocate memory. */
+	virtual void* Allocate(size_t* size, uint8_t alignment) = 0;
 
-	/**  */
-	virtual void Free(void * ptr) = 0;
+	/** Free a specifically allocated memory address memory. */
+	virtual void Free(void* ptr) = 0;
 
-	/**  */
+	/** Clear all allocated memory. */
 	virtual void Clear() = 0;
 
 protected:
-	/** Size of the memory in bytes. */
-	size_t m_size;
-
 	/** Pointer to the first memory address. */
-	void* m_firstAddress;
+	void* m_firstMemoryAddress;
+
+	/** Size of the memory in bytes. */
+	size_t m_memorySize;
 
 	/** Size of the memory used in bytes. */
-	size_t m_usedSize;
+	size_t m_memoryUsed;
 
 	/** Number of memory allocations. */
-	uint64_t m_numAllocations;
+	uint64_t m_numMemoryAllocations;
 };
