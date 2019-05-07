@@ -17,11 +17,11 @@ void EntityManager::AddEntity(Entity* entity)
 	m_entityList.push_back(entity);
 }
 
-void EntityManager::Initialize()
+void EntityManager::Initialize(SDL_Renderer* renderer)
 {
 	for (auto entity : m_entityList)
 	{
-		entity->Initialize();
+		entity->Initialize(renderer);
 	}
 }
 

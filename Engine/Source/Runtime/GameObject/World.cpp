@@ -14,10 +14,10 @@ World::~World()
 
 }
 
-void World::Initialize()
+void World::Initialize(SDL_Renderer* renderer)
 {
 	m_entityManager->AddEntity(m_player.get());
-	m_entityManager->Initialize();
+	m_entityManager->Initialize(renderer);
 #ifdef _DEBUG
 	m_entityManager->LogEntity();
 #endif // _DEBUG

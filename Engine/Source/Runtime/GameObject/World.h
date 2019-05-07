@@ -16,7 +16,7 @@ public:
 	~World();
 
 	/**  */
-	void Initialize();
+	void Initialize(SDL_Renderer* renderer);
 
 	/**  */
 	void Update(float deltaTime);

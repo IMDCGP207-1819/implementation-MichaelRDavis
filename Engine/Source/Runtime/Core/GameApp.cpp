@@ -71,15 +71,13 @@ void GameApp::Startup()
 	m_pWorld = std::make_unique<World>();
 	if (m_pWorld)
 	{
-		m_pWorld->Initialize();
+		m_pWorld->Initialize(m_pRenderer->GetSDLRenderer());
 	}
 
 	m_assetManager = std::make_unique<AssetManager<TextureAsset>>();
 	if (m_assetManager)
 	{
 		m_assetManager->Initialize("Texture Manager");
-
-		std::shared_ptr<TextureAsset> asset = m_assetManager->Load("Content/Textures/Player.png");
 	}
 }
 

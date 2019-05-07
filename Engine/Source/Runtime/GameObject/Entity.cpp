@@ -11,9 +11,9 @@ Entity::~Entity()
 
 }
 
-void Entity::Initialize()
+void Entity::Initialize(SDL_Renderer* renderer)
 {
-
+	m_renderer = renderer;
 }
 
 void Entity::Update(float deltaTime)

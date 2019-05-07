@@ -5,7 +5,8 @@
 
 Player::Player()
 {
-	m_sprite = std::make_unique<SpriteComponent>();
+	m_sprite = std::make_unique<SpriteComponent>(m_renderer);
+	m_sprite->CreateTexture("Content/Textures/Player.png");
 }
 
 Player::~Player()

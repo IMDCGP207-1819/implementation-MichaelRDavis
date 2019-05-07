@@ -17,7 +17,7 @@ public:
 	virtual ~Entity();
 
 	/** Initialize the entity. */
-	virtual void Initialize();
+	virtual void Initialize(SDL_Renderer* renderer);
 
 	/** Update this entity, called once per frame. */
 	virtual void Update(float deltaTime);
@@ -81,6 +81,9 @@ public:
 	}
 
 protected:
+	/** Cached renderer pointer. */
+	SDL_Renderer* m_renderer;
+
 	/** The position of the entity in 2D space. */
 	Vec2 m_position;
 
