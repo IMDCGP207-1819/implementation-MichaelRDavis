@@ -13,26 +13,42 @@ Gamepad::~Gamepad()
 
 void Gamepad::Initialize()
 {
-	if (SDL_NumJoysticks() < 1)
+	for (int32_t i = 0; i < SDL_NumJoysticks(); i++)
 	{
-		printf("No gamepad connected");
-	}
-
-	m_gamepad = SDL_JoystickOpen(0);
-	if (m_gamepad == nullptr)
-	{
-		printf("Unable to open gamepad %s", SDL_GetError());
+		if (SDL_IsGameController(i))
+		{
+			m_gamepad = SDL_GameControllerOpen(i);
+		}
 	}
 }
 
 void Gamepad::Destroy()
 {
-	SDL_JoystickClose(m_gamepad);
+	if (m_gamepad != nullptr)
+	{
+		SDL_GameControllerClose(m_gamepad);
+	}
 }
 
 void Gamepad::HandleGamepadEvents(SDL_Event event)
 {
+	switch (event.type)
+	{
+	case SDL_CONTROLLERBUTTONDOWN:
+	{
+		switch (event.cbutton.button)
+		{
+		case SDL_CONTROLLER_BUTTON_A:
+			std::cout << "Gamepad: A" << std::endl;
+			break;
+		case SDL_CONTROLLER_BUTTON_B:
+			std::cout << "Gamepad: B" << std::endl;
+			break;
 
+		}
+	}
+		break;
+	}
 }
 
 const int32_t Gamepad::m_thumstickDeadZone = 8000;

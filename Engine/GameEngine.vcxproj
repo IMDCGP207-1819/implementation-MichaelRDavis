@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClInclude Include="Source\GeometryBlaster\Bullet.h" />
     <ClInclude Include="Source\GeometryBlaster\Player.h" />
+    <ClInclude Include="Source\Runtime\Core\Config.h" />
     <ClInclude Include="Source\Runtime\Core\GameApp.h" />
     <ClInclude Include="Source\Runtime\Core\Renderer.h" />
     <ClInclude Include="Source\Runtime\EventSystem\Event.h" />

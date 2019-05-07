@@ -4,6 +4,7 @@
 #include "GameObject/World.h"
 #include "Resource/AssetManager.h"
 #include "Resource/TextureAsset.h"
+#include "Config.h"
 
 GameApp::GameApp()
 {
@@ -11,6 +12,7 @@ GameApp::GameApp()
 	m_width = 0;
 	m_height = 0;
 	m_isRunning = true;
+	m_windowTitle = GAME_TITLE;
 	m_windowMode = EWindowMode::EWindowed;
 }
 

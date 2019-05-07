@@ -6,19 +6,19 @@
 class Gamepad
 {
 public:
-	/**  */
+	/** Default constructor. */
 	Gamepad();
 
-	/**  */
+	/** Default destructor. */
 	~Gamepad();
 
-	/**  */
+	/** Initializes the gamepad device. */
 	void Initialize();
 
-	/**  */
+	/** Destroy gamepad device. */
 	void Destroy();
 
-	/**  */
+	/** Process gamepad events. */
 	void HandleGamepadEvents(SDL_Event event);
 
 	/**  */
@@ -34,8 +34,8 @@ public:
 	}
 
 private:
-	/**  */
-	SDL_Joystick* m_gamepad;
+	/** Pointer to the gamepad device. */
+	SDL_GameController* m_gamepad;
 
 	/**  */
 	int32_t m_xAxis;
