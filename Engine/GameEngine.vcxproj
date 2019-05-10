@@ -45,8 +45,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Engine\Binaries\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Engine\Intermediates\</IntDir>
-    <IncludePath>$(SolutionDir)Engine\Source\Libraries\SDL2\include;$(SolutionDir)Engine\Source\Libraries\rapidjson\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Engine\Source\Libraries\SDL2\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Engine\Source\Libraries\SDL2\include;$(SolutionDir)Engine\Source\Libraries\rapidjson\include;$(SolutionDir)Engine\Source\Libraries\FMOD\inc;$(SolutionDir)Engine\Source\Libraries\lua\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Engine\Source\Libraries\SDL2\lib\x64;$(SolutionDir)Engine\Source\Libraries\FMOD\lib;$(SolutionDir)Engine\Source\Libraries\lua;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -58,7 +58,7 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;lua53.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
