@@ -28,6 +28,12 @@ void SpriteComponent::UpdateComponent(float deltaTime)
 
 }
 
+void SpriteComponent::SetFilename(const std::string& filepath)
+{
+	m_spriteName = filepath;
+	CreateTexture(m_spriteName);
+}
+
 void SpriteComponent::CreateTexture(const std::string& texturePath)
 {
 	m_textureAsset = AssetManager<TextureAsset>::GetObject()->Load(texturePath);

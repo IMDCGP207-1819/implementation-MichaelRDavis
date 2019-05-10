@@ -10,17 +10,20 @@ class TextureAsset;
 class SpriteComponent : public Component
 {
 public:
-	/**  */
+	/** Constructor. */
 	SpriteComponent(SDL_Renderer* renderer);
 
-	/**  */
+	/** Default destructor. */
 	~SpriteComponent();
 
-	/**  */
+	/** Initialize this component. */
 	void InitializeComponent() override;
 
-	/**  */
+	/** Update this component, called once per frame. */
 	void UpdateComponent(float deltaTime) override;
+
+	/**  */
+	void SetFilename(const std::string& filepath);
 
 	/**  */
 	void CreateTexture(const std::string& texturePath);
@@ -46,6 +49,12 @@ public:
 		return m_spriteHeight;
 	}
 
+	/**  */
+	inline std::string GetSpriteName() const
+	{
+		return m_spriteName;
+	}
+
 private:
 	/**  */
 	std::shared_ptr<TextureAsset> m_textureAsset;
@@ -67,4 +76,7 @@ private:
 
 	/**  */
 	int32_t m_spriteHeight;
+
+	/**  */
+	std::string m_spriteName;
 };

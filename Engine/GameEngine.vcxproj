@@ -45,7 +45,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Engine\Binaries\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Engine\Intermediates\</IntDir>
-    <IncludePath>$(SolutionDir)Engine\Source\Libraries\SDL2\include;$(SolutionDir)Engine\Source\Libraries\rapidjson\include;$(SolutionDir)Engine\Source\Libraries\FMOD\inc;$(SolutionDir)Engine\Source\Libraries\lua\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Engine\Source\Libraries\SDL2\include;$(SolutionDir)Engine\Source\Libraries\rapidjson\include;$(SolutionDir)Engine\Source\Libraries\FMOD\inc;$(SolutionDir)Engine\Source\Libraries\lua\include;$(SolutionDir)Engine\Source\Libraries\sol2\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Engine\Source\Libraries\SDL2\lib\x64;$(SolutionDir)Engine\Source\Libraries\FMOD\lib;$(SolutionDir)Engine\Source\Libraries\lua;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -56,6 +56,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Engine\Source\Runtime;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Create</PrecompiledHeader>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies>SDL2.lib;SDL2_image.lib;lua53.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -102,6 +103,7 @@
     <ClInclude Include="Source\Runtime\Resource\Asset.h" />
     <ClInclude Include="Source\Runtime\Resource\AssetManager.h" />
     <ClInclude Include="Source\Runtime\Resource\TextureAsset.h" />
+    <ClInclude Include="Source\Runtime\ScriptingSystem\LuaManager.h" />
     <ClInclude Include="Source\Runtime\stdafx.h" />
     <ClInclude Include="Source\Runtime\String\String.h" />
   </ItemGroup>
@@ -128,8 +130,13 @@
     <ClCompile Include="Source\Runtime\Memory\MemoryAllocator.cpp" />
     <ClCompile Include="Source\Runtime\Resource\Asset.cpp" />
     <ClCompile Include="Source\Runtime\Resource\TextureAsset.cpp" />
+    <ClCompile Include="Source\Runtime\ScriptingSystem\LuaManager.cpp" />
     <ClCompile Include="Source\Runtime\stdafx.cpp" />
     <ClCompile Include="Source\Runtime\String\String.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\GeometryBlaster\Bullet.lua" />
+    <None Include="Source\GeometryBlaster\Player.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

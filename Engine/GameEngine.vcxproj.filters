@@ -99,6 +99,9 @@
     <ClInclude Include="Source\Runtime\Audio\AudioCue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Runtime\ScriptingSystem\LuaManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Runtime\Core\GameApp.cpp">
@@ -173,5 +176,12 @@
     <ClCompile Include="Source\Runtime\Audio\AudioCue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Runtime\ScriptingSystem\LuaManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\GeometryBlaster\Player.lua" />
+    <None Include="Source\GeometryBlaster\Bullet.lua" />
   </ItemGroup>
 </Project>
