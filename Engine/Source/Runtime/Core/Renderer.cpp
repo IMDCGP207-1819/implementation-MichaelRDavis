@@ -18,7 +18,7 @@ void Renderer::Initialize(SDL_Window* window)
 
 void Renderer::Clear()
 {
-	SDL_SetRenderDrawColor(m_pRenderer, 0, 191, 255, 255);
+	//SDL_SetRenderDrawColor(m_pRenderer, 0, 191, 255, 255);
 	SDL_RenderClear(m_pRenderer);
 }
 

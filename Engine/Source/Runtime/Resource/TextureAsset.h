@@ -16,4 +16,8 @@ public:
 
 	/** Loads a texture object. */
 	SDL_Surface* LoadTextureAsset();
+
+private:
+	/** The texture surface. */
+	SDL_Surface* m_texSurface;
 };

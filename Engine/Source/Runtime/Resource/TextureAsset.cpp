@@ -9,16 +9,16 @@ TextureAsset::TextureAsset(const std::string textureAssetName)
 
 TextureAsset::~TextureAsset()
 {
-
+	SDL_FreeSurface(m_texSurface);
 }
 
 SDL_Surface* TextureAsset::LoadTextureAsset()
 {
-	SDL_Surface* texSurface = IMG_Load(m_assetName.c_str());
-	if (!texSurface)
+	m_texSurface = IMG_Load(m_assetName.c_str());
+	if (!m_texSurface)
 	{
 		printf("Unable to load texture asset: %s", m_assetName.c_str());
 	}
 
-	return texSurface;
+	return m_texSurface;
 }

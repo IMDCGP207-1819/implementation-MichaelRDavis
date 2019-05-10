@@ -11,7 +11,9 @@ public:
 	Player();
 	~Player();
 
+	void Initialize(SDL_Renderer* renderer) override;
 	void Update(float deltaTime) override;
+	void Draw(SDL_Renderer* renderer) override;
 
 private:
 	std::unique_ptr<SpriteComponent> m_sprite;

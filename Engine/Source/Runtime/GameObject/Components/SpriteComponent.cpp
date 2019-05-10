@@ -32,7 +32,10 @@ void SpriteComponent::CreateTexture(const std::string& texturePath)
 {
 	m_textureAsset = AssetManager<TextureAsset>::GetObject()->Load(texturePath);
 	m_texture = SDL_CreateTextureFromSurface(m_renderer, m_textureAsset->LoadTextureAsset());
-	SDL_QueryTexture(m_texture, nullptr, nullptr, &m_spriteWidth, &m_spriteHeight);
+	if (m_texture == nullptr)
+	{
+		printf("Failed to create texture for %s", texturePath.c_str());
+	}
 }
 
 void SpriteComponent::Draw(SDL_Renderer* renderer)
@@ -44,6 +47,8 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 		rect.h = m_spriteHeight;
 		rect.x = rect.w / 2;
 		rect.y = rect.h / 2;
+
+		SDL_QueryTexture(m_texture, nullptr, nullptr, &m_spriteWidth, &m_spriteHeight);
 
 		SDL_RenderCopyEx(
 			m_renderer,

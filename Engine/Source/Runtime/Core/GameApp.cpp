@@ -68,16 +68,21 @@ void GameApp::Startup()
 		m_pRenderer->Initialize(m_pWindow);
 	}
 
-	m_pWorld = std::make_unique<World>();
-	if (m_pWorld)
+	if (IMG_Init(IMG_INIT_PNG) == 0)
 	{
-		m_pWorld->Initialize(m_pRenderer->GetSDLRenderer());
+		printf("Unable to initialize SDL_image: %s", SDL_GetError());
 	}
 
 	m_assetManager = std::make_unique<AssetManager<TextureAsset>>();
 	if (m_assetManager)
 	{
 		m_assetManager->Initialize("Texture Manager");
+	}
+
+	m_pWorld = std::make_unique<World>();
+	if (m_pWorld)
+	{
+		m_pWorld->Initialize(m_pRenderer->GetSDLRenderer());
 	}
 }
 
