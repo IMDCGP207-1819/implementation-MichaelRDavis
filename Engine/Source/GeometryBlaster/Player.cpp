@@ -1,11 +1,13 @@
 #include "stdafx.h"
 #include "Player.h"
 #include "GameObject/Components/SpriteComponent.h"
+#include "GameObject/Components/InputComponent.h"
 #include "Bullet.h"
 
 Player::Player()
 {
-
+	m_input = std::make_unique<InputComponent>();
+	AddComponent(typeid(m_input), m_input.get());
 }
 
 Player::~Player()

@@ -1,5 +1,9 @@
 #pragma once
 
+/** Gamepad thumbstick deadzones. */
+constexpr int32_t LEFT_THUMBSTICK_DEADZONE{ 7800 };
+constexpr int32_t RIGHT_THUMBSTICK_DEAZONE{ 8700 };
+
 /**
  * 
  */
@@ -42,7 +46,4 @@ private:
 
 	/**  */
 	int32_t m_yAxis;
-
-	/**  */
-	static const int32_t m_thumstickDeadZone;
 };

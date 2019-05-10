@@ -78,6 +78,8 @@
   <ItemGroup>
     <ClInclude Include="Source\GeometryBlaster\Bullet.h" />
     <ClInclude Include="Source\GeometryBlaster\Player.h" />
+    <ClInclude Include="Source\Runtime\Audio\AudioCue.h" />
+    <ClInclude Include="Source\Runtime\Audio\AudioManager.h" />
     <ClInclude Include="Source\Runtime\Core\Config.h" />
     <ClInclude Include="Source\Runtime\Core\GameApp.h" />
     <ClInclude Include="Source\Runtime\Core\Renderer.h" />
@@ -106,6 +108,8 @@
   <ItemGroup>
     <ClCompile Include="Source\GeometryBlaster\Bullet.cpp" />
     <ClCompile Include="Source\GeometryBlaster\Player.cpp" />
+    <ClCompile Include="Source\Runtime\Audio\AudioCue.cpp" />
+    <ClCompile Include="Source\Runtime\Audio\AudioManager.cpp" />
     <ClCompile Include="Source\Runtime\Core\GameApp.cpp" />
     <ClCompile Include="Source\Runtime\Core\Renderer.cpp" />
     <ClCompile Include="Source\Runtime\EventSystem\Event.cpp" />

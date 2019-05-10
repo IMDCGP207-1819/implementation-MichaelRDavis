@@ -27,7 +27,7 @@ public:
 	/** Allocate memory. */
 	virtual void* Allocate(size_t* size, uint8_t alignment) = 0;
 
-	/** Free a specifically allocated memory address memory. */
+	/** Free a specifically allocated memory address. */
 	virtual void Free(void* ptr) = 0;
 
 	/** Clear all allocated memory. */

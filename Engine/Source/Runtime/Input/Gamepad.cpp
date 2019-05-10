@@ -34,6 +34,10 @@ void Gamepad::HandleGamepadEvents(SDL_Event event)
 {
 	switch (event.type)
 	{
+	case SDL_CONTROLLERDEVICEADDED:
+		std::cout << "Gamepad connected" << std::endl;
+		break;
+
 	case SDL_CONTROLLERBUTTONDOWN:
 	{
 		switch (event.cbutton.button)
@@ -44,11 +48,8 @@ void Gamepad::HandleGamepadEvents(SDL_Event event)
 		case SDL_CONTROLLER_BUTTON_B:
 			std::cout << "Gamepad: B" << std::endl;
 			break;
-
 		}
 	}
-		break;
+	break;
 	}
 }
-
-const int32_t Gamepad::m_thumstickDeadZone = 8000;

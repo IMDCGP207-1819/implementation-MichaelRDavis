@@ -31,6 +31,8 @@ public:
 	}
 
 protected:
+	/**  */
+
 	/** Is this component active */
 	bool m_isActive;
 };

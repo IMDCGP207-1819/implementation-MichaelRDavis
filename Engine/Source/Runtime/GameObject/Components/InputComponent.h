@@ -2,6 +2,8 @@
 
 #include "GameObject/Component.h"
 
+class Gamepad;
+
 /**
  * 
  */
@@ -13,4 +15,8 @@ public:
 
 	/** Default destructor. */
 	~InputComponent();
+
+private:
+	/** Gamepad object */
+	std::unique_ptr<Gamepad> m_gamepad;
 };
