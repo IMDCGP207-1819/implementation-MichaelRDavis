@@ -38,6 +38,12 @@ void Gamepad::HandleGamepadEvents(SDL_Event event)
 		std::cout << "Gamepad connected" << std::endl;
 		break;
 
+	case SDL_CONTROLLERAXISMOTION:
+	{
+		SDL_ControllerAxisEvent axisEvent = event.caxis;
+	}
+	break;
+
 	case SDL_CONTROLLERBUTTONDOWN:
 	{
 		switch (event.cbutton.button)
