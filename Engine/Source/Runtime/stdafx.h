@@ -9,7 +9,7 @@ extern "C"
 #include <lualib.h>
 #include <lauxlib.h>
 }
-//#include <sol/sol.hpp>
+#include <sol/sol.hpp>
 
 #include <cstdint>
 #include <iostream>

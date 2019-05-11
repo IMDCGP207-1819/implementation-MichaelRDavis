@@ -14,4 +14,5 @@ public:
 
 private:
 	std::unique_ptr<SpriteComponent> m_sprite;
+	int32_t m_damage;
 };
