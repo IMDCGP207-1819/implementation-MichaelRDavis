@@ -80,6 +80,18 @@ public:
 		return m_isActive;
 	}
 
+#ifdef _DEBUG
+	/** Log components to the console. */
+	void LogComponents()
+	{
+		for (auto it : m_componentList)
+		{
+			const std::type_info& entity = typeid(it.second);
+			printf("%s", entity.name());
+		}
+	}
+#endif
+
 protected:
 	/** Cached renderer pointer. */
 	SDL_Renderer* m_renderer;

@@ -51,6 +51,25 @@ public:
 		return asset;
 	}
 
+	/** Returns asset from the map. */
+	std::shared_ptr<T> Get(const std::string& filePath)
+	{
+		if (filePath.empty())
+		{
+			printf("FilePath cannot be empty");
+		}
+
+		auto it = m_assetMap.find(filePath);
+		if (it != m_assetMap.end())
+		{
+			return (*it).second;
+		}
+		else
+		{
+			printf("Asset not found");
+		}
+	}
+
 	/** Removes an asset from the asset manager. */
 	bool UnLoad(const std::string& filePath)
 	{

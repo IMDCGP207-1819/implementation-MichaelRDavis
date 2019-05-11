@@ -12,8 +12,6 @@ public:
 	/** Default destructor. */
 	~ComponentManager();
 
-	typedef uint32_t ComponentID;
-
 private:
 	/**  */
 };

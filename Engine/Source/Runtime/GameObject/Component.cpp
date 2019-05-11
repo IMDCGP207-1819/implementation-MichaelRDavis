@@ -33,3 +33,8 @@ void Component::DisableComponent()
 {
 	m_isActive = false;
 }
+
+void Component::SetOwner(Entity* newOwner)
+{
+	m_entityOwner = newOwner;
+}

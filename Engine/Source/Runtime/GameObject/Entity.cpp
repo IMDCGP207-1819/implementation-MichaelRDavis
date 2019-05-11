@@ -14,6 +14,10 @@ Entity::~Entity()
 void Entity::Initialize(SDL_Renderer* renderer)
 {
 	m_renderer = renderer;
+
+#ifdef _DEBUG
+	LogComponents();
+#endif 
 }
 
 void Entity::Update(float deltaTime)
