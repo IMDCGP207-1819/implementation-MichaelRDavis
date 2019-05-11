@@ -105,6 +105,15 @@
     <ClInclude Include="Source\Runtime\GameObject\Components\CollisionComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Runtime\AI\AIBehavior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GeometryBlaster\Seeker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GeometryBlaster\Wanderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Runtime\Core\GameApp.cpp">
@@ -185,9 +194,18 @@
     <ClCompile Include="Source\Runtime\GameObject\Components\CollisionComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Runtime\AI\AIBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GeometryBlaster\Seeker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GeometryBlaster\Wanderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Source\GeometryBlaster\Player.lua" />
-    <None Include="Source\GeometryBlaster\Bullet.lua" />
+    <None Include="Content\Scripts\Bullet.lua" />
+    <None Include="Content\Scripts\Player.lua" />
   </ItemGroup>
 </Project>

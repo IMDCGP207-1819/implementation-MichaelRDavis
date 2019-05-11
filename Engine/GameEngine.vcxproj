@@ -79,6 +79,9 @@
   <ItemGroup>
     <ClInclude Include="Source\GeometryBlaster\Bullet.h" />
     <ClInclude Include="Source\GeometryBlaster\Player.h" />
+    <ClInclude Include="Source\GeometryBlaster\Seeker.h" />
+    <ClInclude Include="Source\GeometryBlaster\Wanderer.h" />
+    <ClInclude Include="Source\Runtime\AI\AIBehavior.h" />
     <ClInclude Include="Source\Runtime\Audio\AudioCue.h" />
     <ClInclude Include="Source\Runtime\Audio\AudioManager.h" />
     <ClInclude Include="Source\Runtime\Core\Config.h" />
@@ -111,6 +114,9 @@
   <ItemGroup>
     <ClCompile Include="Source\GeometryBlaster\Bullet.cpp" />
     <ClCompile Include="Source\GeometryBlaster\Player.cpp" />
+    <ClCompile Include="Source\GeometryBlaster\Seeker.cpp" />
+    <ClCompile Include="Source\GeometryBlaster\Wanderer.cpp" />
+    <ClCompile Include="Source\Runtime\AI\AIBehavior.cpp" />
     <ClCompile Include="Source\Runtime\Audio\AudioCue.cpp" />
     <ClCompile Include="Source\Runtime\Audio\AudioManager.cpp" />
     <ClCompile Include="Source\Runtime\Core\GameApp.cpp" />
@@ -137,8 +143,8 @@
     <ClCompile Include="Source\Runtime\String\String.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Source\GeometryBlaster\Bullet.lua" />
-    <None Include="Source\GeometryBlaster\Player.lua" />
+    <None Include="Content\Scripts\Bullet.lua" />
+    <None Include="Content\Scripts\Player.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

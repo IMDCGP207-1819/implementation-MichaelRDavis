@@ -35,3 +35,8 @@ void Bullet::Draw(SDL_Renderer* renderer)
 {
 	Entity::Draw(renderer);
 }
+
+void Bullet::SetOwner(Entity* newOwner)
+{
+	m_owner = newOwner;
+}
