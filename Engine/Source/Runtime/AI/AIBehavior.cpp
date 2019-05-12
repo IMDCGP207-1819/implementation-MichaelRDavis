@@ -2,17 +2,12 @@
 #include "AIBehavior.h"
 #include "GameObject/Entity.h"
 
-AIBehvaior::AIBehvaior()
+AIBehavior::AIBehavior()
 {
 
 }
 
-AIBehvaior::~AIBehvaior()
+AIBehavior::~AIBehavior()
 {
 
-}
-
-void AIBehvaior::SetOwner(Entity* newOwner)
-{
-	m_owner = newOwner;
 }

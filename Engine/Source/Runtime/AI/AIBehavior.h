@@ -7,25 +7,12 @@ class Entity;
 /**
  * 
  */
-class AIBehvaior
+class AIBehavior
 {
 public:
 	/** Default constructor. */
-	AIBehvaior();
+	AIBehavior();
 
 	/** Default destructor. */
-	~AIBehvaior();
-
-	/** Set the owner for this AI behavior. */
-	void SetOwner(Entity* newOwner);
-
-	/** Returns the owner of this behavior.*/
-	inline Entity* GetOwner() const
-	{
-		return m_owner;
-	}
-
-private:
-	/** Entity that owns this AI behavior. */
-	Entity* m_owner;
+	~AIBehavior();
 };

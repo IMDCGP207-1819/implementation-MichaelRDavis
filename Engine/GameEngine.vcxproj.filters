@@ -114,6 +114,9 @@
     <ClInclude Include="Source\GeometryBlaster\Wanderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Runtime\AI\AIComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Runtime\Core\GameApp.cpp">
@@ -201,6 +204,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\GeometryBlaster\Wanderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Runtime\AI\AIComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
