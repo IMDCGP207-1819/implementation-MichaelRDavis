@@ -15,6 +15,9 @@ Player::Player()
 	AddComponent(typeid(m_collision), m_collision.get());
 	m_collision->SetOwner(this);
 	m_collision->SetRadius(5.0f);
+
+	m_maxLives = 3;
+	m_lives = m_maxLives;
 }
 
 Player::~Player()
@@ -30,6 +33,8 @@ void Player::Initialize(SDL_Renderer* renderer)
 	AddComponent(typeid(m_sprite), m_sprite.get());
 	m_sprite->SetOwner(this);
 	m_sprite->CreateTexture("Content/Textures/Player.png");
+
+	m_position = Vec2(950.0f, 500.0f);
 }
 
 void Player::Update(float deltaTime)
@@ -48,5 +53,13 @@ void Player::Draw(SDL_Renderer* renderer)
 	if (m_sprite)
 	{
 		m_sprite->Draw(renderer);
+	}
+}
+
+void Player::Destroy()
+{
+	if (GetIsDead())
+	{
+		Disable();
 	}
 }

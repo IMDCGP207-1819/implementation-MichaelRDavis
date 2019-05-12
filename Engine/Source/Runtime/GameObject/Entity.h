@@ -44,6 +44,12 @@ public:
 	/** Set a new position for the entity. */
 	void SetPosition(Vec2 newPosition);
 
+	/** Set a new scale for this entity. */
+	void SetScale(float newScale);
+
+	/** Set a new rotation for this entity. */
+	void SetRotation(float newRotation);
+
 	/** Set a new velocity for the entity. */
 	void SetVelcity(Vec2 newVelocity);
 
@@ -51,6 +57,18 @@ public:
 	inline Vec2 GetPosition() const
 	{
 		return m_position;
+	}
+
+	/** Returns the scale of this entity. */
+	inline float GetScale() const
+	{
+		return m_scale;
+	}
+
+	/** Returns the rotation of this entity. */
+	inline float GetRotation() const
+	{
+		return m_rotation;
 	}
 
 	/** Returns the velocity of the entity. */
@@ -98,6 +116,12 @@ protected:
 
 	/** The position of the entity in 2D space. */
 	Vec2 m_position;
+
+	/** The scale of this entity in 2D space. */
+	float m_scale;
+
+	/** The rotation of this entity in 2D space. */
+	float m_rotation;
 
 	/** The movement velocity of the entity in 2D space. */
 	Vec2 m_velocity;

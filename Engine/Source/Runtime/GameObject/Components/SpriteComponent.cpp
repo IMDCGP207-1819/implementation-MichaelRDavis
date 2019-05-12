@@ -3,6 +3,7 @@
 #include "Core/Renderer.h"
 #include "Resource/AssetManager.h"
 #include "Resource/TextureAsset.h"
+#include "GameObject/Entity.h"
 
 SpriteComponent::SpriteComponent(SDL_Renderer* renderer)
 {
@@ -49,10 +50,10 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 	if (m_texture)
 	{
 		SDL_Rect rect;
-		rect.w = m_spriteWidth;
-		rect.h = m_spriteHeight;
-		rect.x = rect.w / 2;
-		rect.y = rect.h / 2;
+		rect.w = static_cast<int32_t>(m_entityOwner->GetScale() * m_spriteWidth);
+		rect.h = static_cast<int32_t>(m_entityOwner->GetScale() * m_spriteHeight);
+		rect.x = static_cast<int32_t>(m_entityOwner->GetPosition().x - rect.w / 2);
+		rect.y = static_cast<int32_t>(m_entityOwner->GetPosition().y - rect.h / 2);
 
 		SDL_QueryTexture(m_texture, nullptr, nullptr, &m_spriteWidth, &m_spriteHeight);
 
@@ -61,7 +62,7 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 			m_texture,
 			nullptr,
 			&rect,
-			0.0f,
+			m_entityOwner->GetRotation(),
 			nullptr,
 			SDL_FLIP_NONE);
 	}

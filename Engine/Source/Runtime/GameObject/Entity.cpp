@@ -3,6 +3,8 @@
 
 Entity::Entity()
 {
+	m_position = Vec2(0.0f, 0.0f);
+	m_scale  = 1.0f;
 	m_isActive = true;
 }
 
@@ -41,6 +43,16 @@ void Entity::AddComponent(std::type_index type, Component* comp)
 void Entity::SetPosition(Vec2 newPosition)
 {
 	m_position = newPosition;
+}
+
+void Entity::SetScale(float newScale)
+{
+	m_scale = newScale;
+}
+
+void Entity::SetRotation(float newRotation)
+{
+	m_rotation = newRotation;
 }
 
 void Entity::SetVelcity(Vec2 newVelocity)

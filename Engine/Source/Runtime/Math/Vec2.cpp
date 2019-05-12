@@ -13,11 +13,6 @@ Vec2::Vec2(float inX, float inY)
 	y = inY;
 }
 
-Vec2::Vec2(const Vec2& vec)
-{
-	Vec2(vec.x, vec.y);
-}
-
 float Vec2::Size() const
 {
 	return sqrt(SizeSquared());
