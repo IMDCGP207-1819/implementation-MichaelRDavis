@@ -5,6 +5,7 @@ struct Vec2
 	Vec2();
 	Vec2(float inX, float inY);
 
+	void Normalize();
 	float Size() const;
 	float SizeSquared() const;
 
@@ -17,6 +18,9 @@ struct Vec2
 	Vec2 operator-=(const Vec2& vec);
 	Vec2 operator/=(const Vec2& vec);
 	Vec2 operator*=(const Vec2& vec);
+
+	static const Vec2 zero;
+	static const Vec2 unit;
 
 	float x;
 	float y;

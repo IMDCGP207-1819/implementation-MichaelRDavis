@@ -101,9 +101,7 @@
     <ClInclude Include="Source\Runtime\GameObject\SingletonObject.h" />
     <ClInclude Include="Source\Runtime\GameObject\World.h" />
     <ClInclude Include="Source\Runtime\Input\Gamepad.h" />
-    <ClInclude Include="Source\Runtime\Math\Quat.h" />
     <ClInclude Include="Source\Runtime\Math\Vec2.h" />
-    <ClInclude Include="Source\Runtime\Math\Vec3.h" />
     <ClInclude Include="Source\Runtime\Memory\MemoryAllocator.h" />
     <ClInclude Include="Source\Runtime\Resource\Asset.h" />
     <ClInclude Include="Source\Runtime\Resource\AssetManager.h" />
@@ -134,9 +132,7 @@
     <ClCompile Include="Source\Runtime\GameObject\World.cpp" />
     <ClCompile Include="Source\Runtime\Input\Gamepad.cpp" />
     <ClCompile Include="Source\Runtime\main.cpp" />
-    <ClCompile Include="Source\Runtime\Math\Quat.cpp" />
     <ClCompile Include="Source\Runtime\Math\Vec2.cpp" />
-    <ClCompile Include="Source\Runtime\Math\Vec3.cpp" />
     <ClCompile Include="Source\Runtime\Memory\MemoryAllocator.cpp" />
     <ClCompile Include="Source\Runtime\Resource\Asset.cpp" />
     <ClCompile Include="Source\Runtime\Resource\TextureAsset.cpp" />

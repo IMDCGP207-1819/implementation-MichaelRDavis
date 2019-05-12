@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "Vec2.h"
 
+const Vec2 Vec2::zero(0.0f, 0.0f);
+const Vec2 Vec2::unit(1.0f, 1.0f);
+
 Vec2::Vec2()
 {
 	x = 0.0f;
@@ -11,6 +14,16 @@ Vec2::Vec2(float inX, float inY)
 {
 	x = inX;
 	y = inY;
+}
+
+void Vec2::Normalize()
+{
+	float vecSize = Size();
+	if (vecSize > std::numeric_limits<float>::epsilon())
+	{
+		x /= vecSize;
+		y /= vecSize;
+	}
 }
 
 float Vec2::Size() const
