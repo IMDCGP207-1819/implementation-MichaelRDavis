@@ -100,6 +100,7 @@
     <ClInclude Include="Source\Runtime\GameObject\EntityManager.h" />
     <ClInclude Include="Source\Runtime\GameObject\SingletonObject.h" />
     <ClInclude Include="Source\Runtime\GameObject\World.h" />
+    <ClInclude Include="Source\Runtime\GameObject\WorldLoader.h" />
     <ClInclude Include="Source\Runtime\Input\Gamepad.h" />
     <ClInclude Include="Source\Runtime\Math\Vec2.h" />
     <ClInclude Include="Source\Runtime\Memory\MemoryAllocator.h" />
@@ -130,6 +131,7 @@
     <ClCompile Include="Source\Runtime\GameObject\Entity.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\EntityManager.cpp" />
     <ClCompile Include="Source\Runtime\GameObject\World.cpp" />
+    <ClCompile Include="Source\Runtime\GameObject\WorldLoader.cpp" />
     <ClCompile Include="Source\Runtime\Input\Gamepad.cpp" />
     <ClCompile Include="Source\Runtime\main.cpp" />
     <ClCompile Include="Source\Runtime\Math\Vec2.cpp" />

@@ -4,10 +4,12 @@
 Gamepad::Gamepad()
 {
 	m_gamepad = nullptr;
+	m_isConnected = false;
 }
 
 Gamepad::~Gamepad()
 {
+	Destroy();
 	m_gamepad = nullptr;
 }
 
@@ -18,7 +20,27 @@ void Gamepad::Initialize()
 		if (SDL_IsGameController(i))
 		{
 			m_gamepad = SDL_GameControllerOpen(i);
+			if (m_gamepad != nullptr)
+			{
+				m_isConnected = true;
+			}
 		}
+	}
+
+	std::memset(m_currentButtons, 0, SDL_CONTROLLER_BUTTON_MAX);
+	std::memset(m_previousButtons, 0, SDL_CONTROLLER_BUTTON_MAX);
+}
+
+void Gamepad::PreUpdate()
+{
+	std::memcpy(m_previousButtons, m_currentButtons, SDL_CONTROLLER_BUTTON_MAX);
+}
+
+void Gamepad::Update()
+{
+	for (int32_t i = 0; i < SDL_CONTROLLER_BUTTON_MAX; i++)
+	{
+		m_currentButtons[i] = SDL_GameControllerGetButton(m_gamepad, SDL_GameControllerButton(i));
 	}
 }
 

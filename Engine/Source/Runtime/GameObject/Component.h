@@ -17,6 +17,9 @@ public:
 	/** Initialize this component. */
 	virtual void InitializeComponent();
 
+	/** Called before the main update function. */
+	virtual void PreUpdate();
+
 	/** Update this component called, called once per frame. */
 	virtual void UpdateComponent(float deltaTime);
 

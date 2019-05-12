@@ -16,6 +16,11 @@ public:
 	/** Default destructor. */
 	~InputComponent();
 
+	// Component interface.
+	void InitializeComponent();
+	void PreUpdate();
+	void UpdateComponent(float deltaTime);
+
 private:
 	/** Gamepad object */
 	std::unique_ptr<Gamepad> m_gamepad;

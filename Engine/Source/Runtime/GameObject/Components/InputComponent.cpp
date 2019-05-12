@@ -11,3 +11,24 @@ InputComponent::~InputComponent()
 {
 
 }
+
+void InputComponent::InitializeComponent()
+{
+	Component::InitializeComponent();
+
+	m_gamepad->Initialize();
+}
+
+void InputComponent::PreUpdate()
+{
+	Component::PreUpdate();
+
+	m_gamepad->PreUpdate();
+}
+
+void InputComponent::UpdateComponent(float deltaTime)
+{
+	Component::UpdateComponent(deltaTime);
+
+	m_gamepad->Initialize();
+}

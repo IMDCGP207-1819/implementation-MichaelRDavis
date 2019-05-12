@@ -20,7 +20,7 @@ void World::Initialize(SDL_Renderer* renderer)
 	m_entityManager->Initialize(renderer);
 #ifdef _DEBUG
 	m_entityManager->LogEntity();
-#endif // _DEBUG
+#endif
 }
 
 void World::Update(float deltaTime)

@@ -16,6 +16,11 @@ void Component::InitializeComponent()
 
 }
 
+void Component::PreUpdate()
+{
+
+}
+
 void Component::UpdateComponent(float deltaTime)
 {
 	if (m_isActive)

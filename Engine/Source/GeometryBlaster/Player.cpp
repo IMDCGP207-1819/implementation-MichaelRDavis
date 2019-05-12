@@ -10,6 +10,7 @@ Player::Player()
 	m_input = std::make_unique<InputComponent>();
 	AddComponent(typeid(m_input), m_input.get());
 	m_input->SetOwner(this);
+	m_input->InitializeComponent();
 
 	m_collision = std::make_unique<CollisionComponent>();
 	AddComponent(typeid(m_collision), m_collision.get());
@@ -40,6 +41,8 @@ void Player::Initialize(SDL_Renderer* renderer)
 void Player::Update(float deltaTime)
 {
 	Entity::Update(deltaTime);
+
+	m_input->UpdateComponent(deltaTime);
 
 	//m_velocity = m_playerSpeed * // Get movement direction from gamepad
 	m_position += m_velocity;
