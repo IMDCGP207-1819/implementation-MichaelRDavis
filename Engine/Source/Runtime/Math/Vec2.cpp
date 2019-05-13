@@ -8,6 +8,13 @@ Vec2& Vec2::operator*=(float scale)
 	return *this;
 }
 
+Vec2& Vec2::operator*(float scale)
+{
+	x * scale;
+	y * scale;
+	return *this;
+}
+
 const Vec2 Vec2::zero(0.0f, 0.0f);
 const Vec2 Vec2::unit(1.0f, 1.0f);
 

@@ -21,7 +21,6 @@ public:
 	void PreUpdate();
 	void UpdateComponent(float deltaTime);
 
-private:
 	/** Gamepad object */
 	std::unique_ptr<Gamepad> m_gamepad;
 };

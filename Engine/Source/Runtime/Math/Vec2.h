@@ -19,6 +19,7 @@ struct Vec2
 	Vec2 operator/=(const Vec2& vec);
 	Vec2 operator*=(const Vec2& vec);
 
+	Vec2& operator*(float scale);
 	Vec2& operator*=(float scale);
 
 	static const Vec2 zero;

@@ -20,11 +20,17 @@ void Gamepad::Initialize()
 		if (SDL_IsGameController(i))
 		{
 			m_gamepad = SDL_GameControllerOpen(i);
-			if (m_gamepad != nullptr)
-			{
-				m_isConnected = true;
-			}
 		}
+	}
+
+	if (m_gamepad != nullptr)
+	{
+		m_isConnected = true;
+		std::cout << "Gamepad connected" << std::endl;
+	}
+	else
+	{
+		std::cout << "Gamepad is not connected" << std::endl;
 	}
 
 	std::memset(m_currentButtons, 0, SDL_CONTROLLER_BUTTON_MAX);
@@ -48,10 +54,10 @@ void Gamepad::Update()
 
 	x = SDL_GameControllerGetAxis(m_gamepad, SDL_CONTROLLER_AXIS_LEFTX);
 	y = -SDL_GameControllerGetAxis(m_gamepad, SDL_CONTROLLER_AXIS_LEFTY);
-	m_leftThumbstick = Interpolate(x, y);
+	m_leftThumbstick = Interpolate(static_cast<float>(x), static_cast<float>(y));
 	x = SDL_GameControllerGetAxis(m_gamepad, SDL_CONTROLLER_AXIS_RIGHTX);
 	y = -SDL_GameControllerGetAxis(m_gamepad, SDL_CONTROLLER_AXIS_RIGHTY);
-	m_rightThumbstick = Interpolate(x, y);
+	m_rightThumbstick = Interpolate(static_cast<float>(x), static_cast<float>(y));
 }
 
 void Gamepad::Destroy()

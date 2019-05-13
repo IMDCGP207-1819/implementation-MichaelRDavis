@@ -3,6 +3,7 @@
 #include "GameObject/Components/SpriteComponent.h"
 #include "GameObject/Components/CollisionComponent.h"
 #include "GameObject/Components/InputComponent.h"
+#include "Input/Gamepad.h"
 #include "Bullet.h"
 
 Player::Player()
@@ -44,7 +45,7 @@ void Player::Update(float deltaTime)
 
 	m_input->UpdateComponent(deltaTime);
 
-	//m_velocity = m_playerSpeed * // Get movement direction from gamepad
+	//m_velocity = m_playerSpeed * m_input->m_gamepad->GetLeftThumbStick();
 	m_position += m_velocity;
 	// Clamp the player position to the game viewport
 }
