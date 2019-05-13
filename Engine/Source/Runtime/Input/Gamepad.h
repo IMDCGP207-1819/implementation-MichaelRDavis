@@ -9,8 +9,10 @@ constexpr int32_t RIGHT_THUMBSTICK_DEAZONE{ 8700 };
 /** Gamepad button states. */
 enum class EButtonState
 {
+	ENone,
 	EPressed,
-	EReleased
+	EReleased,
+	EHeld
 };
 
 /**
@@ -40,6 +42,27 @@ public:
 	/** Process gamepad events. */
 	// TODO: Implement an event management system for gamepad input.
 	void HandleGamepadEvents(SDL_Event event);
+
+	/** Returns true if the gamepad button is pressed. */
+	bool IsButtonPressed(SDL_GameControllerButton button) const;
+
+	/** Returns true if the the gamepad button is released. */
+	bool IsButtonReleased(SDL_GameControllerButton button) const;
+
+	/** Interpolates thumbstick input. */
+	Vec2 Interpolate(float inputX, float inputY);
+
+	/** Returns the left thumbstick axis. */
+	inline const Vec2& GetLeftThumbStick() const
+	{
+		return m_leftThumbstick;
+	}
+
+	/** Returns the right thumbstick axis. */
+	inline const Vec2& GetRightThumbstick() const
+	{
+		return m_rightThumbstick;
+	}
 
 private:
 	/** Pointer to the gamepad device. */

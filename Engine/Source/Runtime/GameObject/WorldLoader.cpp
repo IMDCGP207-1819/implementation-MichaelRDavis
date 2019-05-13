@@ -3,5 +3,5 @@
 
 bool WorldLoader::LoadWorld(const std::string& filename)
 {
-
+	return true;
 }

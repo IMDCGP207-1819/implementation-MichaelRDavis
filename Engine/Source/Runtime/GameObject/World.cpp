@@ -1,12 +1,14 @@
 #include "stdafx.h"
 #include "World.h"
 #include "EntityManager.h"
+#include "ComponentManager.h"
 #include "../GeometryBlaster/Player.h"
 
 World::World()
 {
 	m_player = std::make_unique<Player>();
 	m_entityManager = std::make_unique<EntityManager>();
+	m_componentManager = std::make_unique<ComponentManager>();
 }
 
 World::~World()

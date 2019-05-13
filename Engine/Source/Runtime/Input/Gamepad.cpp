@@ -42,6 +42,16 @@ void Gamepad::Update()
 	{
 		m_currentButtons[i] = SDL_GameControllerGetButton(m_gamepad, SDL_GameControllerButton(i));
 	}
+
+	int32_t x = 0;
+	int32_t y = 0;
+
+	x = SDL_GameControllerGetAxis(m_gamepad, SDL_CONTROLLER_AXIS_LEFTX);
+	y = -SDL_GameControllerGetAxis(m_gamepad, SDL_CONTROLLER_AXIS_LEFTY);
+	m_leftThumbstick = Interpolate(x, y);
+	x = SDL_GameControllerGetAxis(m_gamepad, SDL_CONTROLLER_AXIS_RIGHTX);
+	y = -SDL_GameControllerGetAxis(m_gamepad, SDL_CONTROLLER_AXIS_RIGHTY);
+	m_rightThumbstick = Interpolate(x, y);
 }
 
 void Gamepad::Destroy()
@@ -80,4 +90,37 @@ void Gamepad::HandleGamepadEvents(SDL_Event event)
 	}
 	break;
 	}
+}
+
+bool Gamepad::IsButtonPressed(SDL_GameControllerButton button) const
+{
+	return m_currentButtons[button] == 1;
+}
+
+bool Gamepad::IsButtonReleased(SDL_GameControllerButton button) const
+{
+	return m_currentButtons[button] == 0;
+}
+
+Vec2 Gamepad::Interpolate(float inputX, float inputY)
+{
+	const float deadzone = 8000.0f;
+	const float max = 30000.0f;
+
+	Vec2 dir = Vec2::zero;
+	dir.x = inputX;
+	dir.y = inputY;
+
+	if (dir.Size() < deadzone)
+	{
+		dir = Vec2::zero;
+	}
+	else
+	{
+		float f = (dir.Size() - deadzone) / (max - deadzone);
+		f = std::clamp(f, 0.0f, 1.0f);
+		dir *= f / dir.Size();
+	}
+
+	return dir;
 }
