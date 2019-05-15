@@ -10,3 +10,18 @@ AudioManager::~AudioManager()
 {
 
 }
+
+void AudioManager::Initilaize()
+{
+
+}
+
+void AudioManager::Shutdown()
+{
+
+}
+
+void AudioManager::Update()
+{
+
+}

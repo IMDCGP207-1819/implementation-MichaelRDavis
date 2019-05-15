@@ -10,6 +10,7 @@ extern "C"
 #include <lauxlib.h>
 }
 #include <sol/sol.hpp>
+#include <fmod_studio.hpp>
 
 #include <cstdint>
 #include <iostream>
