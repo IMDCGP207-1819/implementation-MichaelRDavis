@@ -1,0 +1,100 @@
+\hypertarget{class_asset_manager}{}\section{Asset\+Manager$<$ T $>$ Class Template Reference}
+\label{class_asset_manager}\index{Asset\+Manager$<$ T $>$@{Asset\+Manager$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Game\+App.\+h$>$}
+
+Inheritance diagram for Asset\+Manager$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_asset_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_asset_manager_a17362b22d791f64a200bfeaffa9b5108}{Asset\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_asset_manager_a99de467c293ead8517bbfd5672b40b0d}{$\sim$\+Asset\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_asset_manager_ace92285c403c555e8e6fdb258e9e57d0}{Initialize}} (const std\+::string name)
+\item 
+std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_asset_manager_ad685ea526834b044a13fe07e630bfe0a}{Load}} (const std\+::string \&file\+Path)
+\item 
+std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_asset_manager_a28d1324d3a691d83e4395661702dc9eb}{Get}} (const std\+::string \&file\+Path)
+\item 
+bool \mbox{\hyperlink{class_asset_manager_a5b015e693d11b39ee98a094ef9d74966}{Un\+Load}} (const std\+::string \&file\+Path)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_asset_manager_a7c1faafe83a1dbbd1ae463f1de7b6476}{Get\+Asset\+Manager\+Name}} () const
+\item 
+const int32\+\_\+t \mbox{\hyperlink{class_asset_manager_a329526176de822f96a6b4fb1cb30ce20}{Get\+Size}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_asset_manager_a17362b22d791f64a200bfeaffa9b5108}\label{class_asset_manager_a17362b22d791f64a200bfeaffa9b5108}} 
+\index{Asset\+Manager@{Asset\+Manager}!Asset\+Manager@{Asset\+Manager}}
+\index{Asset\+Manager@{Asset\+Manager}!Asset\+Manager@{Asset\+Manager}}
+\subsubsection{\texorpdfstring{Asset\+Manager()}{AssetManager()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_asset_manager}{Asset\+Manager}}$<$ T $>$\+::\mbox{\hyperlink{class_asset_manager}{Asset\+Manager}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor. \mbox{\Hypertarget{class_asset_manager_a99de467c293ead8517bbfd5672b40b0d}\label{class_asset_manager_a99de467c293ead8517bbfd5672b40b0d}} 
+\index{Asset\+Manager@{Asset\+Manager}!````~Asset\+Manager@{$\sim$\+Asset\+Manager}}
+\index{````~Asset\+Manager@{$\sim$\+Asset\+Manager}!Asset\+Manager@{Asset\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Asset\+Manager()}{~AssetManager()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_asset_manager}{Asset\+Manager}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_asset_manager}{Asset\+Manager}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_asset_manager_a28d1324d3a691d83e4395661702dc9eb}\label{class_asset_manager_a28d1324d3a691d83e4395661702dc9eb}} 
+\index{Asset\+Manager@{Asset\+Manager}!Get@{Get}}
+\index{Get@{Get}!Asset\+Manager@{Asset\+Manager}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}}$<$ T $>$\+::Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns asset from the map. \mbox{\Hypertarget{class_asset_manager_a7c1faafe83a1dbbd1ae463f1de7b6476}\label{class_asset_manager_a7c1faafe83a1dbbd1ae463f1de7b6476}} 
+\index{Asset\+Manager@{Asset\+Manager}!Get\+Asset\+Manager\+Name@{Get\+Asset\+Manager\+Name}}
+\index{Get\+Asset\+Manager\+Name@{Get\+Asset\+Manager\+Name}!Asset\+Manager@{Asset\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Asset\+Manager\+Name()}{GetAssetManagerName()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const std\+::string\& \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}}$<$ T $>$\+::Get\+Asset\+Manager\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the name of the asset manager. \mbox{\Hypertarget{class_asset_manager_a329526176de822f96a6b4fb1cb30ce20}\label{class_asset_manager_a329526176de822f96a6b4fb1cb30ce20}} 
+\index{Asset\+Manager@{Asset\+Manager}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!Asset\+Manager@{Asset\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const int32\+\_\+t \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}}$<$ T $>$\+::Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the size of the asset manager. \mbox{\Hypertarget{class_asset_manager_ace92285c403c555e8e6fdb258e9e57d0}\label{class_asset_manager_ace92285c403c555e8e6fdb258e9e57d0}} 
+\index{Asset\+Manager@{Asset\+Manager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Asset\+Manager@{Asset\+Manager}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}}$<$ T $>$\+::Initialize (\begin{DoxyParamCaption}\item[{const std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize the asset manager. \mbox{\Hypertarget{class_asset_manager_ad685ea526834b044a13fe07e630bfe0a}\label{class_asset_manager_ad685ea526834b044a13fe07e630bfe0a}} 
+\index{Asset\+Manager@{Asset\+Manager}!Load@{Load}}
+\index{Load@{Load}!Asset\+Manager@{Asset\+Manager}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}}$<$ T $>$\+::Load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Load an asset into the asset manager. \mbox{\Hypertarget{class_asset_manager_a5b015e693d11b39ee98a094ef9d74966}\label{class_asset_manager_a5b015e693d11b39ee98a094ef9d74966}} 
+\index{Asset\+Manager@{Asset\+Manager}!Un\+Load@{Un\+Load}}
+\index{Un\+Load@{Un\+Load}!Asset\+Manager@{Asset\+Manager}}
+\subsubsection{\texorpdfstring{Un\+Load()}{UnLoad()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}}$<$ T $>$\+::Un\+Load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes an asset from the asset manager. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Source/\+Runtime/\+Core/\mbox{\hyperlink{_game_app_8h}{Game\+App.\+h}}\item 
+Engine/\+Source/\+Runtime/\+Resource/\mbox{\hyperlink{_asset_manager_8h}{Asset\+Manager.\+h}}\end{DoxyCompactItemize}

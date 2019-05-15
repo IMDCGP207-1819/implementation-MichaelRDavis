@@ -1,0 +1,128 @@
+\hypertarget{class_gamepad}{}\section{Gamepad Class Reference}
+\label{class_gamepad}\index{Gamepad@{Gamepad}}
+
+
+{\ttfamily \#include $<$Gamepad.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gamepad_a766fe5c4b0971cd755f7c930ede3c068}{Gamepad}} ()
+\item 
+\mbox{\hyperlink{class_gamepad_a5d488c36c656a0f52787671b9b156822}{$\sim$\+Gamepad}} ()
+\item 
+void \mbox{\hyperlink{class_gamepad_a265afcd224a5f19b76b70c4a27b43cf3}{Initialize}} ()
+\item 
+void \mbox{\hyperlink{class_gamepad_aa53820795fc6ae0c38b495f90e730fa7}{Pre\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_gamepad_aade3185158726ef97b588f8c58cb9f8e}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_gamepad_ad37c0c811ab6d486c64a27ec518d8ec9}{Destroy}} ()
+\item 
+void \mbox{\hyperlink{class_gamepad_a864978b3a8913f60ac17addb092e07be}{Handle\+Gamepad\+Events}} (S\+D\+L\+\_\+\+Event event)
+\item 
+bool \mbox{\hyperlink{class_gamepad_a247cbc78f48a4a87c95c5f4909b466c7}{Is\+Button\+Pressed}} (S\+D\+L\+\_\+\+Game\+Controller\+Button button) const
+\item 
+bool \mbox{\hyperlink{class_gamepad_a1e0c5e44c5fa4a871eb1dcff1a47a44e}{Is\+Button\+Released}} (S\+D\+L\+\_\+\+Game\+Controller\+Button button) const
+\item 
+\mbox{\hyperlink{struct_vec2}{Vec2}} \mbox{\hyperlink{class_gamepad_a60cd7249f68b8898173f3182d1570563}{Interpolate}} (float inputX, float inputY)
+\item 
+const \mbox{\hyperlink{struct_vec2}{Vec2}} \& \mbox{\hyperlink{class_gamepad_ac1ae9a32b9f5e64a7a6bd0b05699b112}{Get\+Left\+Thumb\+Stick}} () const
+\item 
+const \mbox{\hyperlink{struct_vec2}{Vec2}} \& \mbox{\hyperlink{class_gamepad_adbb39f23d58e544d26e11dcca0fd0134}{Get\+Right\+Thumbstick}} () const
+\item 
+bool \mbox{\hyperlink{class_gamepad_a78ca5ad8203c0c77e7a2b8782e780234}{Get\+Is\+Connected}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Input device wrapper class for a gamepad device. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_gamepad_a766fe5c4b0971cd755f7c930ede3c068}\label{class_gamepad_a766fe5c4b0971cd755f7c930ede3c068}} 
+\index{Gamepad@{Gamepad}!Gamepad@{Gamepad}}
+\index{Gamepad@{Gamepad}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Gamepad()}{Gamepad()}}
+{\footnotesize\ttfamily Gamepad\+::\+Gamepad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_gamepad_a5d488c36c656a0f52787671b9b156822}\label{class_gamepad_a5d488c36c656a0f52787671b9b156822}} 
+\index{Gamepad@{Gamepad}!````~Gamepad@{$\sim$\+Gamepad}}
+\index{````~Gamepad@{$\sim$\+Gamepad}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{$\sim$\+Gamepad()}{~Gamepad()}}
+{\footnotesize\ttfamily Gamepad\+::$\sim$\+Gamepad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gamepad_ad37c0c811ab6d486c64a27ec518d8ec9}\label{class_gamepad_ad37c0c811ab6d486c64a27ec518d8ec9}} 
+\index{Gamepad@{Gamepad}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void Gamepad\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroy gamepad device. \mbox{\Hypertarget{class_gamepad_a78ca5ad8203c0c77e7a2b8782e780234}\label{class_gamepad_a78ca5ad8203c0c77e7a2b8782e780234}} 
+\index{Gamepad@{Gamepad}!Get\+Is\+Connected@{Get\+Is\+Connected}}
+\index{Get\+Is\+Connected@{Get\+Is\+Connected}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Get\+Is\+Connected()}{GetIsConnected()}}
+{\footnotesize\ttfamily bool Gamepad\+::\+Get\+Is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retunrs true if the gamepad is connected. \mbox{\Hypertarget{class_gamepad_ac1ae9a32b9f5e64a7a6bd0b05699b112}\label{class_gamepad_ac1ae9a32b9f5e64a7a6bd0b05699b112}} 
+\index{Gamepad@{Gamepad}!Get\+Left\+Thumb\+Stick@{Get\+Left\+Thumb\+Stick}}
+\index{Get\+Left\+Thumb\+Stick@{Get\+Left\+Thumb\+Stick}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Get\+Left\+Thumb\+Stick()}{GetLeftThumbStick()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vec2}{Vec2}}\& Gamepad\+::\+Get\+Left\+Thumb\+Stick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the left thumbstick axis. \mbox{\Hypertarget{class_gamepad_adbb39f23d58e544d26e11dcca0fd0134}\label{class_gamepad_adbb39f23d58e544d26e11dcca0fd0134}} 
+\index{Gamepad@{Gamepad}!Get\+Right\+Thumbstick@{Get\+Right\+Thumbstick}}
+\index{Get\+Right\+Thumbstick@{Get\+Right\+Thumbstick}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Get\+Right\+Thumbstick()}{GetRightThumbstick()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vec2}{Vec2}}\& Gamepad\+::\+Get\+Right\+Thumbstick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the right thumbstick axis. \mbox{\Hypertarget{class_gamepad_a864978b3a8913f60ac17addb092e07be}\label{class_gamepad_a864978b3a8913f60ac17addb092e07be}} 
+\index{Gamepad@{Gamepad}!Handle\+Gamepad\+Events@{Handle\+Gamepad\+Events}}
+\index{Handle\+Gamepad\+Events@{Handle\+Gamepad\+Events}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Handle\+Gamepad\+Events()}{HandleGamepadEvents()}}
+{\footnotesize\ttfamily void Gamepad\+::\+Handle\+Gamepad\+Events (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event}]{event }\end{DoxyParamCaption})}
+
+Process gamepad events. \mbox{\Hypertarget{class_gamepad_a265afcd224a5f19b76b70c4a27b43cf3}\label{class_gamepad_a265afcd224a5f19b76b70c4a27b43cf3}} 
+\index{Gamepad@{Gamepad}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Gamepad\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initializes the gamepad device. \mbox{\Hypertarget{class_gamepad_a60cd7249f68b8898173f3182d1570563}\label{class_gamepad_a60cd7249f68b8898173f3182d1570563}} 
+\index{Gamepad@{Gamepad}!Interpolate@{Interpolate}}
+\index{Interpolate@{Interpolate}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Interpolate()}{Interpolate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vec2}{Vec2}} Gamepad\+::\+Interpolate (\begin{DoxyParamCaption}\item[{float}]{inputX,  }\item[{float}]{inputY }\end{DoxyParamCaption})}
+
+Interpolates thumbstick input. \mbox{\Hypertarget{class_gamepad_a247cbc78f48a4a87c95c5f4909b466c7}\label{class_gamepad_a247cbc78f48a4a87c95c5f4909b466c7}} 
+\index{Gamepad@{Gamepad}!Is\+Button\+Pressed@{Is\+Button\+Pressed}}
+\index{Is\+Button\+Pressed@{Is\+Button\+Pressed}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Is\+Button\+Pressed()}{IsButtonPressed()}}
+{\footnotesize\ttfamily bool Gamepad\+::\+Is\+Button\+Pressed (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Game\+Controller\+Button}]{button }\end{DoxyParamCaption}) const}
+
+Returns true if the gamepad button is pressed. \mbox{\Hypertarget{class_gamepad_a1e0c5e44c5fa4a871eb1dcff1a47a44e}\label{class_gamepad_a1e0c5e44c5fa4a871eb1dcff1a47a44e}} 
+\index{Gamepad@{Gamepad}!Is\+Button\+Released@{Is\+Button\+Released}}
+\index{Is\+Button\+Released@{Is\+Button\+Released}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Is\+Button\+Released()}{IsButtonReleased()}}
+{\footnotesize\ttfamily bool Gamepad\+::\+Is\+Button\+Released (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Game\+Controller\+Button}]{button }\end{DoxyParamCaption}) const}
+
+Returns true if the the gamepad button is released. \mbox{\Hypertarget{class_gamepad_aa53820795fc6ae0c38b495f90e730fa7}\label{class_gamepad_aa53820795fc6ae0c38b495f90e730fa7}} 
+\index{Gamepad@{Gamepad}!Pre\+Update@{Pre\+Update}}
+\index{Pre\+Update@{Pre\+Update}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Pre\+Update()}{PreUpdate()}}
+{\footnotesize\ttfamily void Gamepad\+::\+Pre\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Called before the main update function. \mbox{\Hypertarget{class_gamepad_aade3185158726ef97b588f8c58cb9f8e}\label{class_gamepad_aade3185158726ef97b588f8c58cb9f8e}} 
+\index{Gamepad@{Gamepad}!Update@{Update}}
+\index{Update@{Update}!Gamepad@{Gamepad}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Gamepad\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Poll gamepad input device, called once per frame. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Source/\+Runtime/\+Input/\mbox{\hyperlink{_gamepad_8h}{Gamepad.\+h}}\item 
+Engine/\+Source/\+Runtime/\+Input/\mbox{\hyperlink{_gamepad_8cpp}{Gamepad.\+cpp}}\end{DoxyCompactItemize}

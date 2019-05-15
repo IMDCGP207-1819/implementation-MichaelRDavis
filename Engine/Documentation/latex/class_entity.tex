@@ -1,0 +1,255 @@
+\hypertarget{class_entity}{}\section{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a980f368aa07ce358583982821533a54a}{Entity}} ()
+\item 
+virtual \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{$\sim$\+Entity}} ()
+\item 
+virtual void \mbox{\hyperlink{class_entity_a29ff4d8c00040f1aa281f2e039256543}{Initialize}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\item 
+virtual void \mbox{\hyperlink{class_entity_a64043a3f77405466222ff997e272924f}{Update}} (float delta\+Time)
+\item 
+virtual void \mbox{\hyperlink{class_entity_aae4367e01c9e539bc016b6ffa8dcf3d5}{Draw}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\item 
+void \mbox{\hyperlink{class_entity_ae4af7f884155869ae624c5668d67d4e5}{Add\+Component}} (std\+::type\+\_\+index type, \mbox{\hyperlink{class_component}{Component}} $\ast$comp)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{class_entity_a0084a74b2e2a363e4d3224d1877b9cf3}{Get\+Component}} ()
+\item 
+void \mbox{\hyperlink{class_entity_ae4b8c446f4e75b6b531768bc12832276}{Set\+Position}} (\mbox{\hyperlink{struct_vec2}{Vec2}} new\+Position)
+\item 
+void \mbox{\hyperlink{class_entity_a096b2532f1357c05b7b45deed900ca2a}{Set\+Scale}} (float new\+Scale)
+\item 
+void \mbox{\hyperlink{class_entity_a83f149284da6f4dba4274de5c37a408c}{Set\+Rotation}} (float new\+Rotation)
+\item 
+void \mbox{\hyperlink{class_entity_ade1dea9daf20aeaf47fef4f0126a2860}{Set\+Velcity}} (\mbox{\hyperlink{struct_vec2}{Vec2}} new\+Velocity)
+\item 
+\mbox{\hyperlink{struct_vec2}{Vec2}} \mbox{\hyperlink{class_entity_aed198c25368025ba9ff9768f17f19e9e}{Get\+Position}} () const
+\item 
+float \mbox{\hyperlink{class_entity_a56a2203cb76f5a4cd8c16f0f8ce18b57}{Get\+Scale}} () const
+\item 
+float \mbox{\hyperlink{class_entity_ab5e5cf79cf2ce961c23061798488bcc4}{Get\+Rotation}} () const
+\item 
+\mbox{\hyperlink{struct_vec2}{Vec2}} \mbox{\hyperlink{class_entity_a020e999dbfc6b04eb7981b1f2496c4f1}{Get\+Velocity}} () const
+\item 
+void \mbox{\hyperlink{class_entity_a3320db922c2e6a1392144e14c3d6af91}{Set\+Type}} (const std\+::string \&type)
+\item 
+std\+::string \mbox{\hyperlink{class_entity_a906ca5c844298c0258bda83563f925a0}{Get\+Type}} () const
+\item 
+void \mbox{\hyperlink{class_entity_ad940b54ddb93e1b2cc72012589576478}{Enable}} ()
+\item 
+void \mbox{\hyperlink{class_entity_a60976526014b5f8d65666cd51740d421}{Disable}} ()
+\item 
+bool \mbox{\hyperlink{class_entity_a98ee6f61ed846d661e5e660d9f4d7e10}{Get\+Is\+Active}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{class_entity_a797ca76b3015996cbeb3225eff168cfa}{m\+\_\+renderer}}
+\item 
+\mbox{\hyperlink{struct_vec2}{Vec2}} \mbox{\hyperlink{class_entity_af1dc457432910811ea84e53dc1aedffc}{m\+\_\+position}}
+\item 
+float \mbox{\hyperlink{class_entity_a044400bb406b1494de4013a6df8a5933}{m\+\_\+scale}}
+\item 
+float \mbox{\hyperlink{class_entity_aa3ffa7fffee42fdf090ce02b56d6f305}{m\+\_\+rotation}}
+\item 
+\mbox{\hyperlink{struct_vec2}{Vec2}} \mbox{\hyperlink{class_entity_ae284f1957cfefc2bd7fd02812a1ee62e}{m\+\_\+velocity}}
+\item 
+std\+::string \mbox{\hyperlink{class_entity_ab0e743c5f841392748e675c43d3a33c4}{m\+\_\+type}}
+\item 
+std\+::map$<$ std\+::type\+\_\+index, \mbox{\hyperlink{class_component}{Component}} $\ast$ $>$ \mbox{\hyperlink{class_entity_a5f53550a89ee6303d64c8de9e3ade02a}{m\+\_\+component\+List}}
+\item 
+bool \mbox{\hyperlink{class_entity_a1e67bc72cc50f2be6903cfa23b25f3df}{m\+\_\+is\+Active}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_entity}{Entity}} is the base class for all game objects in the game world. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_entity_a980f368aa07ce358583982821533a54a}\label{class_entity_a980f368aa07ce358583982821533a54a}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}\label{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}} 
+\index{Entity@{Entity}!````~Entity@{$\sim$\+Entity}}
+\index{````~Entity@{$\sim$\+Entity}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{$\sim$\+Entity()}{~Entity()}}
+{\footnotesize\ttfamily Entity\+::$\sim$\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_entity_ae4af7f884155869ae624c5668d67d4e5}\label{class_entity_ae4af7f884155869ae624c5668d67d4e5}} 
+\index{Entity@{Entity}!Add\+Component@{Add\+Component}}
+\index{Add\+Component@{Add\+Component}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Add\+Component()}{AddComponent()}}
+{\footnotesize\ttfamily void Entity\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{std\+::type\+\_\+index}]{type,  }\item[{\mbox{\hyperlink{class_component}{Component}} $\ast$}]{comp }\end{DoxyParamCaption})}
+
+Add a component to this entity. \mbox{\Hypertarget{class_entity_a60976526014b5f8d65666cd51740d421}\label{class_entity_a60976526014b5f8d65666cd51740d421}} 
+\index{Entity@{Entity}!Disable@{Disable}}
+\index{Disable@{Disable}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily void Entity\+::\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disable this entity. \mbox{\Hypertarget{class_entity_aae4367e01c9e539bc016b6ffa8dcf3d5}\label{class_entity_aae4367e01c9e539bc016b6ffa8dcf3d5}} 
+\index{Entity@{Entity}!Draw@{Draw}}
+\index{Draw@{Draw}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Entity\+::\+Draw (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Draw this entity. \mbox{\Hypertarget{class_entity_ad940b54ddb93e1b2cc72012589576478}\label{class_entity_ad940b54ddb93e1b2cc72012589576478}} 
+\index{Entity@{Entity}!Enable@{Enable}}
+\index{Enable@{Enable}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily void Entity\+::\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Activate this entity. \mbox{\Hypertarget{class_entity_a0084a74b2e2a363e4d3224d1877b9cf3}\label{class_entity_a0084a74b2e2a363e4d3224d1877b9cf3}} 
+\index{Entity@{Entity}!Get\+Component@{Get\+Component}}
+\index{Get\+Component@{Get\+Component}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Get\+Component()}{GetComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ Entity\+::\+Get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a component that is attached to this entity. \mbox{\Hypertarget{class_entity_a98ee6f61ed846d661e5e660d9f4d7e10}\label{class_entity_a98ee6f61ed846d661e5e660d9f4d7e10}} 
+\index{Entity@{Entity}!Get\+Is\+Active@{Get\+Is\+Active}}
+\index{Get\+Is\+Active@{Get\+Is\+Active}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Get\+Is\+Active()}{GetIsActive()}}
+{\footnotesize\ttfamily bool Entity\+::\+Get\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the active state of this entity. \mbox{\Hypertarget{class_entity_aed198c25368025ba9ff9768f17f19e9e}\label{class_entity_aed198c25368025ba9ff9768f17f19e9e}} 
+\index{Entity@{Entity}!Get\+Position@{Get\+Position}}
+\index{Get\+Position@{Get\+Position}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Get\+Position()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vec2}{Vec2}} Entity\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the position of the entity. \mbox{\Hypertarget{class_entity_ab5e5cf79cf2ce961c23061798488bcc4}\label{class_entity_ab5e5cf79cf2ce961c23061798488bcc4}} 
+\index{Entity@{Entity}!Get\+Rotation@{Get\+Rotation}}
+\index{Get\+Rotation@{Get\+Rotation}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Get\+Rotation()}{GetRotation()}}
+{\footnotesize\ttfamily float Entity\+::\+Get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the rotation of this entity. \mbox{\Hypertarget{class_entity_a56a2203cb76f5a4cd8c16f0f8ce18b57}\label{class_entity_a56a2203cb76f5a4cd8c16f0f8ce18b57}} 
+\index{Entity@{Entity}!Get\+Scale@{Get\+Scale}}
+\index{Get\+Scale@{Get\+Scale}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Get\+Scale()}{GetScale()}}
+{\footnotesize\ttfamily float Entity\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the scale of this entity. \mbox{\Hypertarget{class_entity_a906ca5c844298c0258bda83563f925a0}\label{class_entity_a906ca5c844298c0258bda83563f925a0}} 
+\index{Entity@{Entity}!Get\+Type@{Get\+Type}}
+\index{Get\+Type@{Get\+Type}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Get\+Type()}{GetType()}}
+{\footnotesize\ttfamily std\+::string Entity\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the entity type. \mbox{\Hypertarget{class_entity_a020e999dbfc6b04eb7981b1f2496c4f1}\label{class_entity_a020e999dbfc6b04eb7981b1f2496c4f1}} 
+\index{Entity@{Entity}!Get\+Velocity@{Get\+Velocity}}
+\index{Get\+Velocity@{Get\+Velocity}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Get\+Velocity()}{GetVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vec2}{Vec2}} Entity\+::\+Get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the velocity of the entity. \mbox{\Hypertarget{class_entity_a29ff4d8c00040f1aa281f2e039256543}\label{class_entity_a29ff4d8c00040f1aa281f2e039256543}} 
+\index{Entity@{Entity}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Entity\+::\+Initialize (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize the entity. \mbox{\Hypertarget{class_entity_ae4b8c446f4e75b6b531768bc12832276}\label{class_entity_ae4b8c446f4e75b6b531768bc12832276}} 
+\index{Entity@{Entity}!Set\+Position@{Set\+Position}}
+\index{Set\+Position@{Set\+Position}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Set\+Position()}{SetPosition()}}
+{\footnotesize\ttfamily void Entity\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vec2}{Vec2}}}]{new\+Position }\end{DoxyParamCaption})}
+
+Set a new position for the entity. \mbox{\Hypertarget{class_entity_a83f149284da6f4dba4274de5c37a408c}\label{class_entity_a83f149284da6f4dba4274de5c37a408c}} 
+\index{Entity@{Entity}!Set\+Rotation@{Set\+Rotation}}
+\index{Set\+Rotation@{Set\+Rotation}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Set\+Rotation()}{SetRotation()}}
+{\footnotesize\ttfamily void Entity\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{new\+Rotation }\end{DoxyParamCaption})}
+
+Set a new rotation for this entity. \mbox{\Hypertarget{class_entity_a096b2532f1357c05b7b45deed900ca2a}\label{class_entity_a096b2532f1357c05b7b45deed900ca2a}} 
+\index{Entity@{Entity}!Set\+Scale@{Set\+Scale}}
+\index{Set\+Scale@{Set\+Scale}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Set\+Scale()}{SetScale()}}
+{\footnotesize\ttfamily void Entity\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{float}]{new\+Scale }\end{DoxyParamCaption})}
+
+Set a new scale for this entity. \mbox{\Hypertarget{class_entity_a3320db922c2e6a1392144e14c3d6af91}\label{class_entity_a3320db922c2e6a1392144e14c3d6af91}} 
+\index{Entity@{Entity}!Set\+Type@{Set\+Type}}
+\index{Set\+Type@{Set\+Type}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Set\+Type()}{SetType()}}
+{\footnotesize\ttfamily void Entity\+::\+Set\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+
+Set the entity type. \mbox{\Hypertarget{class_entity_ade1dea9daf20aeaf47fef4f0126a2860}\label{class_entity_ade1dea9daf20aeaf47fef4f0126a2860}} 
+\index{Entity@{Entity}!Set\+Velcity@{Set\+Velcity}}
+\index{Set\+Velcity@{Set\+Velcity}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Set\+Velcity()}{SetVelcity()}}
+{\footnotesize\ttfamily void Entity\+::\+Set\+Velcity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vec2}{Vec2}}}]{new\+Velocity }\end{DoxyParamCaption})}
+
+Set a new velocity for the entity. \mbox{\Hypertarget{class_entity_a64043a3f77405466222ff997e272924f}\label{class_entity_a64043a3f77405466222ff997e272924f}} 
+\index{Entity@{Entity}!Update@{Update}}
+\index{Update@{Update}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Entity\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update this entity, called once per frame. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_entity_a5f53550a89ee6303d64c8de9e3ade02a}\label{class_entity_a5f53550a89ee6303d64c8de9e3ade02a}} 
+\index{Entity@{Entity}!m\+\_\+component\+List@{m\+\_\+component\+List}}
+\index{m\+\_\+component\+List@{m\+\_\+component\+List}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+component\+List}{m\_componentList}}
+{\footnotesize\ttfamily std\+::map$<$std\+::type\+\_\+index, \mbox{\hyperlink{class_component}{Component}}$\ast$$>$ Entity\+::m\+\_\+component\+List\hspace{0.3cm}{\ttfamily [protected]}}
+
+Map of components attached to this entity keyed to via their type. \mbox{\Hypertarget{class_entity_a1e67bc72cc50f2be6903cfa23b25f3df}\label{class_entity_a1e67bc72cc50f2be6903cfa23b25f3df}} 
+\index{Entity@{Entity}!m\+\_\+is\+Active@{m\+\_\+is\+Active}}
+\index{m\+\_\+is\+Active@{m\+\_\+is\+Active}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+is\+Active}{m\_isActive}}
+{\footnotesize\ttfamily bool Entity\+::m\+\_\+is\+Active\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag to activate this entity. \mbox{\Hypertarget{class_entity_af1dc457432910811ea84e53dc1aedffc}\label{class_entity_af1dc457432910811ea84e53dc1aedffc}} 
+\index{Entity@{Entity}!m\+\_\+position@{m\+\_\+position}}
+\index{m\+\_\+position@{m\+\_\+position}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+position}{m\_position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vec2}{Vec2}} Entity\+::m\+\_\+position\hspace{0.3cm}{\ttfamily [protected]}}
+
+The position of the entity in 2D space. \mbox{\Hypertarget{class_entity_a797ca76b3015996cbeb3225eff168cfa}\label{class_entity_a797ca76b3015996cbeb3225eff168cfa}} 
+\index{Entity@{Entity}!m\+\_\+renderer@{m\+\_\+renderer}}
+\index{m\+\_\+renderer@{m\+\_\+renderer}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+renderer}{m\_renderer}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ Entity\+::m\+\_\+renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+Cached renderer pointer. \mbox{\Hypertarget{class_entity_aa3ffa7fffee42fdf090ce02b56d6f305}\label{class_entity_aa3ffa7fffee42fdf090ce02b56d6f305}} 
+\index{Entity@{Entity}!m\+\_\+rotation@{m\+\_\+rotation}}
+\index{m\+\_\+rotation@{m\+\_\+rotation}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+rotation}{m\_rotation}}
+{\footnotesize\ttfamily float Entity\+::m\+\_\+rotation\hspace{0.3cm}{\ttfamily [protected]}}
+
+The rotation of this entity in 2D space. \mbox{\Hypertarget{class_entity_a044400bb406b1494de4013a6df8a5933}\label{class_entity_a044400bb406b1494de4013a6df8a5933}} 
+\index{Entity@{Entity}!m\+\_\+scale@{m\+\_\+scale}}
+\index{m\+\_\+scale@{m\+\_\+scale}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+scale}{m\_scale}}
+{\footnotesize\ttfamily float Entity\+::m\+\_\+scale\hspace{0.3cm}{\ttfamily [protected]}}
+
+The scale of this entity in 2D space. \mbox{\Hypertarget{class_entity_ab0e743c5f841392748e675c43d3a33c4}\label{class_entity_ab0e743c5f841392748e675c43d3a33c4}} 
+\index{Entity@{Entity}!m\+\_\+type@{m\+\_\+type}}
+\index{m\+\_\+type@{m\+\_\+type}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+type}{m\_type}}
+{\footnotesize\ttfamily std\+::string Entity\+::m\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+The name for this entity. \mbox{\Hypertarget{class_entity_ae284f1957cfefc2bd7fd02812a1ee62e}\label{class_entity_ae284f1957cfefc2bd7fd02812a1ee62e}} 
+\index{Entity@{Entity}!m\+\_\+velocity@{m\+\_\+velocity}}
+\index{m\+\_\+velocity@{m\+\_\+velocity}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+velocity}{m\_velocity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vec2}{Vec2}} Entity\+::m\+\_\+velocity\hspace{0.3cm}{\ttfamily [protected]}}
+
+The movement velocity of the entity in 2D space. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Source/\+Runtime/\+Game\+Object/\mbox{\hyperlink{_entity_8h}{Entity.\+h}}\item 
+Engine/\+Source/\+Runtime/\+Game\+Object/\mbox{\hyperlink{_entity_8cpp}{Entity.\+cpp}}\end{DoxyCompactItemize}

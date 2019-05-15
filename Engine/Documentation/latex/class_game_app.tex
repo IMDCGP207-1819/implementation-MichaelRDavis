@@ -1,0 +1,88 @@
+\hypertarget{class_game_app}{}\section{Game\+App Class Reference}
+\label{class_game_app}\index{Game\+App@{Game\+App}}
+
+
+{\ttfamily \#include $<$Game\+App.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_app_a60fa14c5e72ac86d85257732494210ce}{Game\+App}} ()
+\item 
+\mbox{\hyperlink{class_game_app_ae23ced12f4a79184b3719b3905c58170}{$\sim$\+Game\+App}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_app_a9d9218c197e35c45cd0027f109dcd6a2}{Startup}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_app_a0dc0f7396813debb806c16d79efcb111}{Shutdown}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_app_af48020622e6db3aa8e55458c3abdff87}{Update}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_game_app_a62c5268bda2f50c7535848cd21c884b4}{Process\+Events}} ()
+\item 
+bool \mbox{\hyperlink{class_game_app_aabc1e7e91c577c681c1ef8e45b926286}{Get\+Is\+Running}} () const
+\item 
+S\+D\+L\+\_\+\+Window $\ast$ \mbox{\hyperlink{class_game_app_a08fc92ae5300a57c05f7bafefa53b82e}{Get\+Window}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstraction layer for a game application. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_app_a60fa14c5e72ac86d85257732494210ce}\label{class_game_app_a60fa14c5e72ac86d85257732494210ce}} 
+\index{Game\+App@{Game\+App}!Game\+App@{Game\+App}}
+\index{Game\+App@{Game\+App}!Game\+App@{Game\+App}}
+\subsubsection{\texorpdfstring{Game\+App()}{GameApp()}}
+{\footnotesize\ttfamily Game\+App\+::\+Game\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default \mbox{\hyperlink{class_game_app}{Game\+App}} constructor. \mbox{\Hypertarget{class_game_app_ae23ced12f4a79184b3719b3905c58170}\label{class_game_app_ae23ced12f4a79184b3719b3905c58170}} 
+\index{Game\+App@{Game\+App}!````~Game\+App@{$\sim$\+Game\+App}}
+\index{````~Game\+App@{$\sim$\+Game\+App}!Game\+App@{Game\+App}}
+\subsubsection{\texorpdfstring{$\sim$\+Game\+App()}{~GameApp()}}
+{\footnotesize\ttfamily Game\+App\+::$\sim$\+Game\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default \mbox{\hyperlink{class_game_app}{Game\+App}} destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_app_aabc1e7e91c577c681c1ef8e45b926286}\label{class_game_app_aabc1e7e91c577c681c1ef8e45b926286}} 
+\index{Game\+App@{Game\+App}!Get\+Is\+Running@{Get\+Is\+Running}}
+\index{Get\+Is\+Running@{Get\+Is\+Running}!Game\+App@{Game\+App}}
+\subsubsection{\texorpdfstring{Get\+Is\+Running()}{GetIsRunning()}}
+{\footnotesize\ttfamily bool Game\+App\+::\+Get\+Is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the application is currently running. \mbox{\Hypertarget{class_game_app_a08fc92ae5300a57c05f7bafefa53b82e}\label{class_game_app_a08fc92ae5300a57c05f7bafefa53b82e}} 
+\index{Game\+App@{Game\+App}!Get\+Window@{Get\+Window}}
+\index{Get\+Window@{Get\+Window}!Game\+App@{Game\+App}}
+\subsubsection{\texorpdfstring{Get\+Window()}{GetWindow()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Window$\ast$ Game\+App\+::\+Get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a pointer to the native window. \mbox{\Hypertarget{class_game_app_a62c5268bda2f50c7535848cd21c884b4}\label{class_game_app_a62c5268bda2f50c7535848cd21c884b4}} 
+\index{Game\+App@{Game\+App}!Process\+Events@{Process\+Events}}
+\index{Process\+Events@{Process\+Events}!Game\+App@{Game\+App}}
+\subsubsection{\texorpdfstring{Process\+Events()}{ProcessEvents()}}
+{\footnotesize\ttfamily void Game\+App\+::\+Process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Handles application messages. \mbox{\Hypertarget{class_game_app_a0dc0f7396813debb806c16d79efcb111}\label{class_game_app_a0dc0f7396813debb806c16d79efcb111}} 
+\index{Game\+App@{Game\+App}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Game\+App@{Game\+App}}
+\subsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Game\+App\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destroys the application. \mbox{\Hypertarget{class_game_app_a9d9218c197e35c45cd0027f109dcd6a2}\label{class_game_app_a9d9218c197e35c45cd0027f109dcd6a2}} 
+\index{Game\+App@{Game\+App}!Startup@{Startup}}
+\index{Startup@{Startup}!Game\+App@{Game\+App}}
+\subsubsection{\texorpdfstring{Startup()}{Startup()}}
+{\footnotesize\ttfamily void Game\+App\+::\+Startup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize the application state. \mbox{\Hypertarget{class_game_app_af48020622e6db3aa8e55458c3abdff87}\label{class_game_app_af48020622e6db3aa8e55458c3abdff87}} 
+\index{Game\+App@{Game\+App}!Update@{Update}}
+\index{Update@{Update}!Game\+App@{Game\+App}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Game\+App\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Updates the application, called once per frame. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Source/\+Runtime/\+Core/\mbox{\hyperlink{_game_app_8h}{Game\+App.\+h}}\item 
+Engine/\+Source/\+Runtime/\+Core/\mbox{\hyperlink{_game_app_8cpp}{Game\+App.\+cpp}}\end{DoxyCompactItemize}

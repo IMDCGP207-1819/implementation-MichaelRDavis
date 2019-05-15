@@ -1,0 +1,66 @@
+\hypertarget{_gamepad_8h}{}\section{Engine/\+Source/\+Runtime/\+Input/\+Gamepad.h File Reference}
+\label{_gamepad_8h}\index{Engine/\+Source/\+Runtime/\+Input/\+Gamepad.\+h@{Engine/\+Source/\+Runtime/\+Input/\+Gamepad.\+h}}
+{\ttfamily \#include \char`\"{}Math/\+Vec2.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_gamepad}{Gamepad}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4b}{E\+Button\+State}} \{ \mbox{\hyperlink{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4ba9902d58435e8208bf6fd67278632145e}{E\+Button\+State\+::\+E\+None}}, 
+\mbox{\hyperlink{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4ba285b1470b2b641d36001b3580f23080e}{E\+Button\+State\+::\+E\+Pressed}}, 
+\mbox{\hyperlink{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4bafad8ce33b1d75ddd050d959caf5cfb0f}{E\+Button\+State\+::\+E\+Released}}, 
+\mbox{\hyperlink{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4ba19573d1ab24a940942953d3b76d45530}{E\+Button\+State\+::\+E\+Held}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr int32\+\_\+t \mbox{\hyperlink{_gamepad_8h_acafc222885e8970d37f25745c23f8ba2}{L\+E\+F\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+D\+Z\+O\+NE}} \{ 7800 \}
+\item 
+constexpr int32\+\_\+t \mbox{\hyperlink{_gamepad_8h_a6fb7fc81f69fd5007265c09fb13e9810}{R\+I\+G\+H\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+Z\+O\+NE}} \{ 8700 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4b}\label{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4b}} 
+\index{Gamepad.\+h@{Gamepad.\+h}!E\+Button\+State@{E\+Button\+State}}
+\index{E\+Button\+State@{E\+Button\+State}!Gamepad.\+h@{Gamepad.\+h}}
+\subsubsection{\texorpdfstring{E\+Button\+State}{EButtonState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4b}{E\+Button\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\mbox{\hyperlink{class_gamepad}{Gamepad}} button states. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+None@{E\+None}!Gamepad.\+h@{Gamepad.\+h}}\index{Gamepad.\+h@{Gamepad.\+h}!E\+None@{E\+None}}}\mbox{\Hypertarget{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4ba9902d58435e8208bf6fd67278632145e}\label{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4ba9902d58435e8208bf6fd67278632145e}} 
+E\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+Pressed@{E\+Pressed}!Gamepad.\+h@{Gamepad.\+h}}\index{Gamepad.\+h@{Gamepad.\+h}!E\+Pressed@{E\+Pressed}}}\mbox{\Hypertarget{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4ba285b1470b2b641d36001b3580f23080e}\label{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4ba285b1470b2b641d36001b3580f23080e}} 
+E\+Pressed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+Released@{E\+Released}!Gamepad.\+h@{Gamepad.\+h}}\index{Gamepad.\+h@{Gamepad.\+h}!E\+Released@{E\+Released}}}\mbox{\Hypertarget{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4bafad8ce33b1d75ddd050d959caf5cfb0f}\label{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4bafad8ce33b1d75ddd050d959caf5cfb0f}} 
+E\+Released&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+Held@{E\+Held}!Gamepad.\+h@{Gamepad.\+h}}\index{Gamepad.\+h@{Gamepad.\+h}!E\+Held@{E\+Held}}}\mbox{\Hypertarget{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4ba19573d1ab24a940942953d3b76d45530}\label{_gamepad_8h_a7e7392f1e24ef55450099d5e7d095c4ba19573d1ab24a940942953d3b76d45530}} 
+E\+Held&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_gamepad_8h_acafc222885e8970d37f25745c23f8ba2}\label{_gamepad_8h_acafc222885e8970d37f25745c23f8ba2}} 
+\index{Gamepad.\+h@{Gamepad.\+h}!L\+E\+F\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+D\+Z\+O\+NE@{L\+E\+F\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+D\+Z\+O\+NE}}
+\index{L\+E\+F\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+D\+Z\+O\+NE@{L\+E\+F\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+D\+Z\+O\+NE}!Gamepad.\+h@{Gamepad.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+F\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+D\+Z\+O\+NE}{LEFT\_THUMBSTICK\_DEADZONE}}
+{\footnotesize\ttfamily constexpr int32\+\_\+t L\+E\+F\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+D\+Z\+O\+NE \{ 7800 \}}
+
+\mbox{\hyperlink{class_gamepad}{Gamepad}} thumbstick deadzones. \mbox{\Hypertarget{_gamepad_8h_a6fb7fc81f69fd5007265c09fb13e9810}\label{_gamepad_8h_a6fb7fc81f69fd5007265c09fb13e9810}} 
+\index{Gamepad.\+h@{Gamepad.\+h}!R\+I\+G\+H\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+Z\+O\+NE@{R\+I\+G\+H\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+Z\+O\+NE}}
+\index{R\+I\+G\+H\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+Z\+O\+NE@{R\+I\+G\+H\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+Z\+O\+NE}!Gamepad.\+h@{Gamepad.\+h}}
+\subsubsection{\texorpdfstring{R\+I\+G\+H\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+Z\+O\+NE}{RIGHT\_THUMBSTICK\_DEAZONE}}
+{\footnotesize\ttfamily constexpr int32\+\_\+t R\+I\+G\+H\+T\+\_\+\+T\+H\+U\+M\+B\+S\+T\+I\+C\+K\+\_\+\+D\+E\+A\+Z\+O\+NE \{ 8700 \}}
+

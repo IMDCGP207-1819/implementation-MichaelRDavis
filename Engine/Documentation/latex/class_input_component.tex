@@ -1,0 +1,94 @@
+\hypertarget{class_input_component}{}\section{Input\+Component Class Reference}
+\label{class_input_component}\index{Input\+Component@{Input\+Component}}
+
+
+{\ttfamily \#include $<$Input\+Component.\+h$>$}
+
+Inheritance diagram for Input\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_input_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_component_ae3af150f66c8e72ea4bef4b089c48d99}{Input\+Component}} ()
+\item 
+\mbox{\hyperlink{class_input_component_a50e6b9501302f0c8f055325ca652050e}{$\sim$\+Input\+Component}} ()
+\item 
+void \mbox{\hyperlink{class_input_component_ad4262870839371f79747db5b6faf25a7}{Initialize\+Component}} ()
+\item 
+void \mbox{\hyperlink{class_input_component_a99f431a305362899b8a6682b390c8899}{Pre\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_input_component_a42d3b0dffbedfd8cf62702096780ed4d}{Update\+Component}} (float delta\+Time)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_gamepad}{Gamepad}} $>$ \mbox{\hyperlink{class_input_component_a73abf6fc0132814d3cdca33aa5d3dfba}{m\+\_\+gamepad}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_input_component_ae3af150f66c8e72ea4bef4b089c48d99}\label{class_input_component_ae3af150f66c8e72ea4bef4b089c48d99}} 
+\index{Input\+Component@{Input\+Component}!Input\+Component@{Input\+Component}}
+\index{Input\+Component@{Input\+Component}!Input\+Component@{Input\+Component}}
+\subsubsection{\texorpdfstring{Input\+Component()}{InputComponent()}}
+{\footnotesize\ttfamily Input\+Component\+::\+Input\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_input_component_a50e6b9501302f0c8f055325ca652050e}\label{class_input_component_a50e6b9501302f0c8f055325ca652050e}} 
+\index{Input\+Component@{Input\+Component}!````~Input\+Component@{$\sim$\+Input\+Component}}
+\index{````~Input\+Component@{$\sim$\+Input\+Component}!Input\+Component@{Input\+Component}}
+\subsubsection{\texorpdfstring{$\sim$\+Input\+Component()}{~InputComponent()}}
+{\footnotesize\ttfamily Input\+Component\+::$\sim$\+Input\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_input_component_ad4262870839371f79747db5b6faf25a7}\label{class_input_component_ad4262870839371f79747db5b6faf25a7}} 
+\index{Input\+Component@{Input\+Component}!Initialize\+Component@{Initialize\+Component}}
+\index{Initialize\+Component@{Initialize\+Component}!Input\+Component@{Input\+Component}}
+\subsubsection{\texorpdfstring{Initialize\+Component()}{InitializeComponent()}}
+{\footnotesize\ttfamily void Input\+Component\+::\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize this component. 
+
+Reimplemented from \mbox{\hyperlink{class_component_a65053e7e92ff6344e6b028111e43c3c9}{Component}}.
+
+\mbox{\Hypertarget{class_input_component_a99f431a305362899b8a6682b390c8899}\label{class_input_component_a99f431a305362899b8a6682b390c8899}} 
+\index{Input\+Component@{Input\+Component}!Pre\+Update@{Pre\+Update}}
+\index{Pre\+Update@{Pre\+Update}!Input\+Component@{Input\+Component}}
+\subsubsection{\texorpdfstring{Pre\+Update()}{PreUpdate()}}
+{\footnotesize\ttfamily void Input\+Component\+::\+Pre\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Called before the main update function. 
+
+Reimplemented from \mbox{\hyperlink{class_component_a7866088cbcf6713821951955eadc85ce}{Component}}.
+
+\mbox{\Hypertarget{class_input_component_a42d3b0dffbedfd8cf62702096780ed4d}\label{class_input_component_a42d3b0dffbedfd8cf62702096780ed4d}} 
+\index{Input\+Component@{Input\+Component}!Update\+Component@{Update\+Component}}
+\index{Update\+Component@{Update\+Component}!Input\+Component@{Input\+Component}}
+\subsubsection{\texorpdfstring{Update\+Component()}{UpdateComponent()}}
+{\footnotesize\ttfamily void Input\+Component\+::\+Update\+Component (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update this component called, called once per frame. 
+
+Reimplemented from \mbox{\hyperlink{class_component_a8afb7c9504f763728bfedf642cfc5f43}{Component}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_input_component_a73abf6fc0132814d3cdca33aa5d3dfba}\label{class_input_component_a73abf6fc0132814d3cdca33aa5d3dfba}} 
+\index{Input\+Component@{Input\+Component}!m\+\_\+gamepad@{m\+\_\+gamepad}}
+\index{m\+\_\+gamepad@{m\+\_\+gamepad}!Input\+Component@{Input\+Component}}
+\subsubsection{\texorpdfstring{m\+\_\+gamepad}{m\_gamepad}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_gamepad}{Gamepad}}$>$ Input\+Component\+::m\+\_\+gamepad}
+
+\mbox{\hyperlink{class_gamepad}{Gamepad}} object 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Source/\+Runtime/\+Game\+Object/\+Components/\mbox{\hyperlink{_input_component_8h}{Input\+Component.\+h}}\item 
+Engine/\+Source/\+Runtime/\+Game\+Object/\+Components/\mbox{\hyperlink{_input_component_8cpp}{Input\+Component.\+cpp}}\end{DoxyCompactItemize}

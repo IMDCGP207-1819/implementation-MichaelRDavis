@@ -1,0 +1,80 @@
+\hypertarget{class_entity_manager}{}\section{Entity\+Manager Class Reference}
+\label{class_entity_manager}\index{Entity\+Manager@{Entity\+Manager}}
+
+
+{\ttfamily \#include $<$Entity\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_manager_a7555637657d090171be6ceee8451de0a}{Entity\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_entity_manager_a71a36c9fb8d579a1a1ec108e0fccf175}{$\sim$\+Entity\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_entity_manager_a06dc55d7fe6da1f48ca2a9313c7060e7}{Add\+Entity}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
+\item 
+void \mbox{\hyperlink{class_entity_manager_a0af35630dea63b0b62b1b03fac453a0f}{Initialize}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\item 
+void \mbox{\hyperlink{class_entity_manager_a29ee635235a8b76bdf10336d70dbf6ed}{Update}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_entity_manager_acdea7d35f1b2d2df949f3360c30728ab}{Draw}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_entity_manager_a9657535930969fb7296aa6bb370df1ea}{Get\+Entity\+Count}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+High level class for managing game entities. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_entity_manager_a7555637657d090171be6ceee8451de0a}\label{class_entity_manager_a7555637657d090171be6ceee8451de0a}} 
+\index{Entity\+Manager@{Entity\+Manager}!Entity\+Manager@{Entity\+Manager}}
+\index{Entity\+Manager@{Entity\+Manager}!Entity\+Manager@{Entity\+Manager}}
+\subsubsection{\texorpdfstring{Entity\+Manager()}{EntityManager()}}
+{\footnotesize\ttfamily Entity\+Manager\+::\+Entity\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_entity_manager_a71a36c9fb8d579a1a1ec108e0fccf175}\label{class_entity_manager_a71a36c9fb8d579a1a1ec108e0fccf175}} 
+\index{Entity\+Manager@{Entity\+Manager}!````~Entity\+Manager@{$\sim$\+Entity\+Manager}}
+\index{````~Entity\+Manager@{$\sim$\+Entity\+Manager}!Entity\+Manager@{Entity\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Entity\+Manager()}{~EntityManager()}}
+{\footnotesize\ttfamily Entity\+Manager\+::$\sim$\+Entity\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_entity_manager_a06dc55d7fe6da1f48ca2a9313c7060e7}\label{class_entity_manager_a06dc55d7fe6da1f48ca2a9313c7060e7}} 
+\index{Entity\+Manager@{Entity\+Manager}!Add\+Entity@{Add\+Entity}}
+\index{Add\+Entity@{Add\+Entity}!Entity\+Manager@{Entity\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Entity()}{AddEntity()}}
+{\footnotesize\ttfamily void Entity\+Manager\+::\+Add\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+Add an entity to the manager. \mbox{\Hypertarget{class_entity_manager_acdea7d35f1b2d2df949f3360c30728ab}\label{class_entity_manager_acdea7d35f1b2d2df949f3360c30728ab}} 
+\index{Entity\+Manager@{Entity\+Manager}!Draw@{Draw}}
+\index{Draw@{Draw}!Entity\+Manager@{Entity\+Manager}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Entity\+Manager\+::\+Draw (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+Draw any managed entities. \mbox{\Hypertarget{class_entity_manager_a9657535930969fb7296aa6bb370df1ea}\label{class_entity_manager_a9657535930969fb7296aa6bb370df1ea}} 
+\index{Entity\+Manager@{Entity\+Manager}!Get\+Entity\+Count@{Get\+Entity\+Count}}
+\index{Get\+Entity\+Count@{Get\+Entity\+Count}!Entity\+Manager@{Entity\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Entity\+Count()}{GetEntityCount()}}
+{\footnotesize\ttfamily uint64\+\_\+t Entity\+Manager\+::\+Get\+Entity\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of manged entities. \mbox{\Hypertarget{class_entity_manager_a0af35630dea63b0b62b1b03fac453a0f}\label{class_entity_manager_a0af35630dea63b0b62b1b03fac453a0f}} 
+\index{Entity\+Manager@{Entity\+Manager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Entity\+Manager@{Entity\+Manager}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Entity\+Manager\+::\+Initialize (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+Initialize any managed entities. \mbox{\Hypertarget{class_entity_manager_a29ee635235a8b76bdf10336d70dbf6ed}\label{class_entity_manager_a29ee635235a8b76bdf10336d70dbf6ed}} 
+\index{Entity\+Manager@{Entity\+Manager}!Update@{Update}}
+\index{Update@{Update}!Entity\+Manager@{Entity\+Manager}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Entity\+Manager\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+Update any managed entities, called once per frame. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Source/\+Runtime/\+Game\+Object/\mbox{\hyperlink{_entity_manager_8h}{Entity\+Manager.\+h}}\item 
+Engine/\+Source/\+Runtime/\+Game\+Object/\mbox{\hyperlink{_entity_manager_8cpp}{Entity\+Manager.\+cpp}}\end{DoxyCompactItemize}

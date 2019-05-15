@@ -1,0 +1,80 @@
+\hypertarget{class_lua_manager}{}\section{Lua\+Manager Class Reference}
+\label{class_lua_manager}\index{Lua\+Manager@{Lua\+Manager}}
+
+
+{\ttfamily \#include $<$Lua\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lua_manager_a11da08140b20bfb4e77ac117a6bc7a0a}{Lua\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_lua_manager_a26a821d05088bb1a6d7642b6312930aa}{$\sim$\+Lua\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_lua_manager_a839c0f1bea728a4aa055b8e0be26bc27}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_lua_manager_aa03c69244e112bcd5377c8fe965a5136}{Exceute\+String}} (const std\+::string \&str)
+\item 
+void \mbox{\hyperlink{class_lua_manager_a5c770602033c62a3eba4ece231c33ed5}{Execute\+File}} (const std\+::string \&file\+Path)
+\item 
+sol\+::table \mbox{\hyperlink{class_lua_manager_af885a50a5fe0368b32853385342ae7e6}{Get\+Table\+Keys}} (const std\+::string \&name)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_entity}{Entity}} $>$ \mbox{\hyperlink{class_lua_manager_a04d24b48c0d51473d64a956fc800c312}{Load\+Entity}} (const std\+::string \&type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+High-\/level manager for managing lua script objects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lua_manager_a11da08140b20bfb4e77ac117a6bc7a0a}\label{class_lua_manager_a11da08140b20bfb4e77ac117a6bc7a0a}} 
+\index{Lua\+Manager@{Lua\+Manager}!Lua\+Manager@{Lua\+Manager}}
+\index{Lua\+Manager@{Lua\+Manager}!Lua\+Manager@{Lua\+Manager}}
+\subsubsection{\texorpdfstring{Lua\+Manager()}{LuaManager()}}
+{\footnotesize\ttfamily Lua\+Manager\+::\+Lua\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_lua_manager_a26a821d05088bb1a6d7642b6312930aa}\label{class_lua_manager_a26a821d05088bb1a6d7642b6312930aa}} 
+\index{Lua\+Manager@{Lua\+Manager}!````~Lua\+Manager@{$\sim$\+Lua\+Manager}}
+\index{````~Lua\+Manager@{$\sim$\+Lua\+Manager}!Lua\+Manager@{Lua\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Lua\+Manager()}{~LuaManager()}}
+{\footnotesize\ttfamily Lua\+Manager\+::$\sim$\+Lua\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lua_manager_aa03c69244e112bcd5377c8fe965a5136}\label{class_lua_manager_aa03c69244e112bcd5377c8fe965a5136}} 
+\index{Lua\+Manager@{Lua\+Manager}!Exceute\+String@{Exceute\+String}}
+\index{Exceute\+String@{Exceute\+String}!Lua\+Manager@{Lua\+Manager}}
+\subsubsection{\texorpdfstring{Exceute\+String()}{ExceuteString()}}
+{\footnotesize\ttfamily void Lua\+Manager\+::\+Exceute\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+Load and execute a lua script from a string \mbox{\Hypertarget{class_lua_manager_a5c770602033c62a3eba4ece231c33ed5}\label{class_lua_manager_a5c770602033c62a3eba4ece231c33ed5}} 
+\index{Lua\+Manager@{Lua\+Manager}!Execute\+File@{Execute\+File}}
+\index{Execute\+File@{Execute\+File}!Lua\+Manager@{Lua\+Manager}}
+\subsubsection{\texorpdfstring{Execute\+File()}{ExecuteFile()}}
+{\footnotesize\ttfamily void Lua\+Manager\+::\+Execute\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})}
+
+Load and execute a lua script from a file. \mbox{\Hypertarget{class_lua_manager_af885a50a5fe0368b32853385342ae7e6}\label{class_lua_manager_af885a50a5fe0368b32853385342ae7e6}} 
+\index{Lua\+Manager@{Lua\+Manager}!Get\+Table\+Keys@{Get\+Table\+Keys}}
+\index{Get\+Table\+Keys@{Get\+Table\+Keys}!Lua\+Manager@{Lua\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Table\+Keys()}{GetTableKeys()}}
+{\footnotesize\ttfamily sol\+::table Lua\+Manager\+::\+Get\+Table\+Keys (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+Retrieves table keys from a lua script. \mbox{\Hypertarget{class_lua_manager_a839c0f1bea728a4aa055b8e0be26bc27}\label{class_lua_manager_a839c0f1bea728a4aa055b8e0be26bc27}} 
+\index{Lua\+Manager@{Lua\+Manager}!Init@{Init}}
+\index{Init@{Init}!Lua\+Manager@{Lua\+Manager}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Lua\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initializes the lua state manager object. \mbox{\Hypertarget{class_lua_manager_a04d24b48c0d51473d64a956fc800c312}\label{class_lua_manager_a04d24b48c0d51473d64a956fc800c312}} 
+\index{Lua\+Manager@{Lua\+Manager}!Load\+Entity@{Load\+Entity}}
+\index{Load\+Entity@{Load\+Entity}!Lua\+Manager@{Lua\+Manager}}
+\subsubsection{\texorpdfstring{Load\+Entity()}{LoadEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_entity}{Entity}} $>$ Lua\+Manager\+::\+Load\+Entity (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+
+Load an entity from a lua script file. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Source/\+Runtime/\+Scripting\+System/\mbox{\hyperlink{_lua_manager_8h}{Lua\+Manager.\+h}}\item 
+Engine/\+Source/\+Runtime/\+Scripting\+System/\mbox{\hyperlink{_lua_manager_8cpp}{Lua\+Manager.\+cpp}}\end{DoxyCompactItemize}

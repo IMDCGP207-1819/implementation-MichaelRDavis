@@ -1,0 +1,110 @@
+\hypertarget{class_memory_allocator}{}\section{Memory\+Allocator Class Reference}
+\label{class_memory_allocator}\index{Memory\+Allocator@{Memory\+Allocator}}
+
+
+{\ttfamily \#include $<$Memory\+Allocator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_memory_allocator_aeb408be3b4170052a477bd917bfba8a4}{Memory\+Allocator}} ()
+\item 
+\mbox{\hyperlink{class_memory_allocator_ad1f08b45facfce42c5103f726eb4e6d5}{Memory\+Allocator}} (size\+\_\+t size, void $\ast$ptr)
+\item 
+\mbox{\hyperlink{class_memory_allocator_a29649a1c897a6edca2a223ee9a100f34}{$\sim$\+Memory\+Allocator}} ()
+\item 
+virtual void $\ast$ \mbox{\hyperlink{class_memory_allocator_aa56c860aa8027554aa9bd6d7c9780a67}{Allocate}} (size\+\_\+t $\ast$size, uint8\+\_\+t alignment)=0
+\item 
+virtual void \mbox{\hyperlink{class_memory_allocator_ae6ee38cd52e3e0710251b4e3eb550c6d}{Free}} (void $\ast$ptr)=0
+\item 
+virtual void \mbox{\hyperlink{class_memory_allocator_a204e81d93d93f1db39e134b956422e56}{Clear}} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{class_memory_allocator_a62ec2c2ef91d62f61e630c75844b1279}{m\+\_\+first\+Memory\+Address}}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_memory_allocator_a219f6c1d24a8a556f4d1ec1bb0b11171}{m\+\_\+memory\+Size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_memory_allocator_a5961e1f05827593c67b17094ff8007bf}{m\+\_\+memory\+Used}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_memory_allocator_a0fbd7580dfb92e7e5ba20c44658df574}{m\+\_\+num\+Memory\+Allocations}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base memory allocator class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_memory_allocator_aeb408be3b4170052a477bd917bfba8a4}\label{class_memory_allocator_aeb408be3b4170052a477bd917bfba8a4}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!Memory\+Allocator@{Memory\+Allocator}}
+\index{Memory\+Allocator@{Memory\+Allocator}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{Memory\+Allocator()}{MemoryAllocator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Memory\+Allocator\+::\+Memory\+Allocator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_memory_allocator_ad1f08b45facfce42c5103f726eb4e6d5}\label{class_memory_allocator_ad1f08b45facfce42c5103f726eb4e6d5}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!Memory\+Allocator@{Memory\+Allocator}}
+\index{Memory\+Allocator@{Memory\+Allocator}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{Memory\+Allocator()}{MemoryAllocator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Memory\+Allocator\+::\+Memory\+Allocator (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Constructor. \mbox{\Hypertarget{class_memory_allocator_a29649a1c897a6edca2a223ee9a100f34}\label{class_memory_allocator_a29649a1c897a6edca2a223ee9a100f34}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!````~Memory\+Allocator@{$\sim$\+Memory\+Allocator}}
+\index{````~Memory\+Allocator@{$\sim$\+Memory\+Allocator}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{$\sim$\+Memory\+Allocator()}{~MemoryAllocator()}}
+{\footnotesize\ttfamily Memory\+Allocator\+::$\sim$\+Memory\+Allocator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_memory_allocator_aa56c860aa8027554aa9bd6d7c9780a67}\label{class_memory_allocator_aa56c860aa8027554aa9bd6d7c9780a67}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily virtual void$\ast$ Memory\+Allocator\+::\+Allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{size,  }\item[{uint8\+\_\+t}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Allocate memory. \mbox{\Hypertarget{class_memory_allocator_a204e81d93d93f1db39e134b956422e56}\label{class_memory_allocator_a204e81d93d93f1db39e134b956422e56}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!Clear@{Clear}}
+\index{Clear@{Clear}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily virtual void Memory\+Allocator\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Clear all allocated memory. \mbox{\Hypertarget{class_memory_allocator_ae6ee38cd52e3e0710251b4e3eb550c6d}\label{class_memory_allocator_ae6ee38cd52e3e0710251b4e3eb550c6d}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!Free@{Free}}
+\index{Free@{Free}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{Free()}{Free()}}
+{\footnotesize\ttfamily virtual void Memory\+Allocator\+::\+Free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Free a specifically allocated memory address. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_memory_allocator_a62ec2c2ef91d62f61e630c75844b1279}\label{class_memory_allocator_a62ec2c2ef91d62f61e630c75844b1279}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!m\+\_\+first\+Memory\+Address@{m\+\_\+first\+Memory\+Address}}
+\index{m\+\_\+first\+Memory\+Address@{m\+\_\+first\+Memory\+Address}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{m\+\_\+first\+Memory\+Address}{m\_firstMemoryAddress}}
+{\footnotesize\ttfamily void$\ast$ Memory\+Allocator\+::m\+\_\+first\+Memory\+Address\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the first memory address. \mbox{\Hypertarget{class_memory_allocator_a219f6c1d24a8a556f4d1ec1bb0b11171}\label{class_memory_allocator_a219f6c1d24a8a556f4d1ec1bb0b11171}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!m\+\_\+memory\+Size@{m\+\_\+memory\+Size}}
+\index{m\+\_\+memory\+Size@{m\+\_\+memory\+Size}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{m\+\_\+memory\+Size}{m\_memorySize}}
+{\footnotesize\ttfamily size\+\_\+t Memory\+Allocator\+::m\+\_\+memory\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+Size of the memory in bytes. \mbox{\Hypertarget{class_memory_allocator_a5961e1f05827593c67b17094ff8007bf}\label{class_memory_allocator_a5961e1f05827593c67b17094ff8007bf}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!m\+\_\+memory\+Used@{m\+\_\+memory\+Used}}
+\index{m\+\_\+memory\+Used@{m\+\_\+memory\+Used}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{m\+\_\+memory\+Used}{m\_memoryUsed}}
+{\footnotesize\ttfamily size\+\_\+t Memory\+Allocator\+::m\+\_\+memory\+Used\hspace{0.3cm}{\ttfamily [protected]}}
+
+Size of the memory used in bytes. \mbox{\Hypertarget{class_memory_allocator_a0fbd7580dfb92e7e5ba20c44658df574}\label{class_memory_allocator_a0fbd7580dfb92e7e5ba20c44658df574}} 
+\index{Memory\+Allocator@{Memory\+Allocator}!m\+\_\+num\+Memory\+Allocations@{m\+\_\+num\+Memory\+Allocations}}
+\index{m\+\_\+num\+Memory\+Allocations@{m\+\_\+num\+Memory\+Allocations}!Memory\+Allocator@{Memory\+Allocator}}
+\subsubsection{\texorpdfstring{m\+\_\+num\+Memory\+Allocations}{m\_numMemoryAllocations}}
+{\footnotesize\ttfamily uint64\+\_\+t Memory\+Allocator\+::m\+\_\+num\+Memory\+Allocations\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of memory allocations. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Source/\+Runtime/\+Memory/\mbox{\hyperlink{_memory_allocator_8h}{Memory\+Allocator.\+h}}\item 
+Engine/\+Source/\+Runtime/\+Memory/\mbox{\hyperlink{_memory_allocator_8cpp}{Memory\+Allocator.\+cpp}}\end{DoxyCompactItemize}

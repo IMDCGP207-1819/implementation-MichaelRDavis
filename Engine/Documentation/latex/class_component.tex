@@ -1,0 +1,144 @@
+\hypertarget{class_component}{}\section{Component Class Reference}
+\label{class_component}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+Inheritance diagram for Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_a8775db6d1a2c1afc2e77cd3c8f39da6f}{Component}} ()
+\item 
+virtual \mbox{\hyperlink{class_component_ab8378fa275af98e568a7e91d33d867af}{$\sim$\+Component}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a65053e7e92ff6344e6b028111e43c3c9}{Initialize\+Component}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a7866088cbcf6713821951955eadc85ce}{Pre\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a8afb7c9504f763728bfedf642cfc5f43}{Update\+Component}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_component_adccde1de0f593815f081c7df620becbe}{Enable\+Component}} ()
+\item 
+void \mbox{\hyperlink{class_component_abe8c32edb2ca2b367223ed1f183dc512}{Disable\+Component}} ()
+\item 
+void \mbox{\hyperlink{class_component_afe37d738fe82aa6b77d7e7398651aa78}{Set\+Owner}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$new\+Owner)
+\item 
+bool \mbox{\hyperlink{class_component_acc8b4b096202b1b981973eee31bd682e}{Get\+Is\+Active}} () const
+\item 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_component_a7bd8639dadfcaef6baaff8c3b17ae5e6}{Get\+Entity\+Owner}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_component_a98e6a9c221fbd50fe38567a48d0da17e}{m\+\_\+entity\+Owner}}
+\item 
+bool \mbox{\hyperlink{class_component_a6ed72c25c8ea738ebc5a69c66728bf60}{m\+\_\+is\+Active}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_component}{Component}} is a base class for all components that can be attached to entities. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_component_a8775db6d1a2c1afc2e77cd3c8f39da6f}\label{class_component_a8775db6d1a2c1afc2e77cd3c8f39da6f}} 
+\index{Component@{Component}!Component@{Component}}
+\index{Component@{Component}!Component@{Component}}
+\subsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily Component\+::\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_component_ab8378fa275af98e568a7e91d33d867af}\label{class_component_ab8378fa275af98e568a7e91d33d867af}} 
+\index{Component@{Component}!````~Component@{$\sim$\+Component}}
+\index{````~Component@{$\sim$\+Component}!Component@{Component}}
+\subsubsection{\texorpdfstring{$\sim$\+Component()}{~Component()}}
+{\footnotesize\ttfamily Component\+::$\sim$\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_component_abe8c32edb2ca2b367223ed1f183dc512}\label{class_component_abe8c32edb2ca2b367223ed1f183dc512}} 
+\index{Component@{Component}!Disable\+Component@{Disable\+Component}}
+\index{Disable\+Component@{Disable\+Component}!Component@{Component}}
+\subsubsection{\texorpdfstring{Disable\+Component()}{DisableComponent()}}
+{\footnotesize\ttfamily void Component\+::\+Disable\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disable this component. \mbox{\Hypertarget{class_component_adccde1de0f593815f081c7df620becbe}\label{class_component_adccde1de0f593815f081c7df620becbe}} 
+\index{Component@{Component}!Enable\+Component@{Enable\+Component}}
+\index{Enable\+Component@{Enable\+Component}!Component@{Component}}
+\subsubsection{\texorpdfstring{Enable\+Component()}{EnableComponent()}}
+{\footnotesize\ttfamily void Component\+::\+Enable\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enable this component. \mbox{\Hypertarget{class_component_a7bd8639dadfcaef6baaff8c3b17ae5e6}\label{class_component_a7bd8639dadfcaef6baaff8c3b17ae5e6}} 
+\index{Component@{Component}!Get\+Entity\+Owner@{Get\+Entity\+Owner}}
+\index{Get\+Entity\+Owner@{Get\+Entity\+Owner}!Component@{Component}}
+\subsubsection{\texorpdfstring{Get\+Entity\+Owner()}{GetEntityOwner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}}$\ast$ Component\+::\+Get\+Entity\+Owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the entity that owns this component. \mbox{\Hypertarget{class_component_acc8b4b096202b1b981973eee31bd682e}\label{class_component_acc8b4b096202b1b981973eee31bd682e}} 
+\index{Component@{Component}!Get\+Is\+Active@{Get\+Is\+Active}}
+\index{Get\+Is\+Active@{Get\+Is\+Active}!Component@{Component}}
+\subsubsection{\texorpdfstring{Get\+Is\+Active()}{GetIsActive()}}
+{\footnotesize\ttfamily bool Component\+::\+Get\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if this component is active. \mbox{\Hypertarget{class_component_a65053e7e92ff6344e6b028111e43c3c9}\label{class_component_a65053e7e92ff6344e6b028111e43c3c9}} 
+\index{Component@{Component}!Initialize\+Component@{Initialize\+Component}}
+\index{Initialize\+Component@{Initialize\+Component}!Component@{Component}}
+\subsubsection{\texorpdfstring{Initialize\+Component()}{InitializeComponent()}}
+{\footnotesize\ttfamily void Component\+::\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize this component. 
+
+Reimplemented in \mbox{\hyperlink{class_input_component_ad4262870839371f79747db5b6faf25a7}{Input\+Component}}, and \mbox{\hyperlink{class_sprite_component_af4040c615bebb4aea20f274f77e36733}{Sprite\+Component}}.
+
+\mbox{\Hypertarget{class_component_a7866088cbcf6713821951955eadc85ce}\label{class_component_a7866088cbcf6713821951955eadc85ce}} 
+\index{Component@{Component}!Pre\+Update@{Pre\+Update}}
+\index{Pre\+Update@{Pre\+Update}!Component@{Component}}
+\subsubsection{\texorpdfstring{Pre\+Update()}{PreUpdate()}}
+{\footnotesize\ttfamily void Component\+::\+Pre\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Called before the main update function. 
+
+Reimplemented in \mbox{\hyperlink{class_input_component_a99f431a305362899b8a6682b390c8899}{Input\+Component}}.
+
+\mbox{\Hypertarget{class_component_afe37d738fe82aa6b77d7e7398651aa78}\label{class_component_afe37d738fe82aa6b77d7e7398651aa78}} 
+\index{Component@{Component}!Set\+Owner@{Set\+Owner}}
+\index{Set\+Owner@{Set\+Owner}!Component@{Component}}
+\subsubsection{\texorpdfstring{Set\+Owner()}{SetOwner()}}
+{\footnotesize\ttfamily void Component\+::\+Set\+Owner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} $\ast$}]{new\+Owner }\end{DoxyParamCaption})}
+
+Set the owner for this component. \mbox{\Hypertarget{class_component_a8afb7c9504f763728bfedf642cfc5f43}\label{class_component_a8afb7c9504f763728bfedf642cfc5f43}} 
+\index{Component@{Component}!Update\+Component@{Update\+Component}}
+\index{Update\+Component@{Update\+Component}!Component@{Component}}
+\subsubsection{\texorpdfstring{Update\+Component()}{UpdateComponent()}}
+{\footnotesize\ttfamily void Component\+::\+Update\+Component (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update this component called, called once per frame. 
+
+Reimplemented in \mbox{\hyperlink{class_sprite_component_aba00f9c0ecc0a0de41f271267c5440ff}{Sprite\+Component}}, and \mbox{\hyperlink{class_input_component_a42d3b0dffbedfd8cf62702096780ed4d}{Input\+Component}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_component_a98e6a9c221fbd50fe38567a48d0da17e}\label{class_component_a98e6a9c221fbd50fe38567a48d0da17e}} 
+\index{Component@{Component}!m\+\_\+entity\+Owner@{m\+\_\+entity\+Owner}}
+\index{m\+\_\+entity\+Owner@{m\+\_\+entity\+Owner}!Component@{Component}}
+\subsubsection{\texorpdfstring{m\+\_\+entity\+Owner}{m\_entityOwner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_entity}{Entity}}$\ast$ Component\+::m\+\_\+entity\+Owner\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\hyperlink{class_entity}{Entity}} that owns this component \mbox{\Hypertarget{class_component_a6ed72c25c8ea738ebc5a69c66728bf60}\label{class_component_a6ed72c25c8ea738ebc5a69c66728bf60}} 
+\index{Component@{Component}!m\+\_\+is\+Active@{m\+\_\+is\+Active}}
+\index{m\+\_\+is\+Active@{m\+\_\+is\+Active}!Component@{Component}}
+\subsubsection{\texorpdfstring{m\+\_\+is\+Active}{m\_isActive}}
+{\footnotesize\ttfamily bool Component\+::m\+\_\+is\+Active\hspace{0.3cm}{\ttfamily [protected]}}
+
+Is this component active 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Source/\+Runtime/\+Game\+Object/\mbox{\hyperlink{_component_8h}{Component.\+h}}\item 
+Engine/\+Source/\+Runtime/\+Game\+Object/\mbox{\hyperlink{_component_8cpp}{Component.\+cpp}}\end{DoxyCompactItemize}
