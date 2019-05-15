@@ -1,6 +1,6 @@
 # Game Engine
 A small game engine for a twin stick shooter game, called Geometry Wars. Requires a game controller to play.
-Documentations is provided.
+Documentation is provided.
 
 # Bibliography
 * Gregory, JG. (2019) *Game Engine Architecture*. Third Edition. Great Britain. CRC Press.
