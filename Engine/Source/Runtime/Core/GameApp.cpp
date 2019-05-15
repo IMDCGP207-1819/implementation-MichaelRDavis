@@ -77,6 +77,8 @@ void GameApp::Startup()
 	if (m_assetManager)
 	{
 		m_assetManager->Initialize("Texture Manager");
+
+		// TODO: Load all resources on game start.
 	}
 
 	m_pWorld = std::make_unique<World>();
@@ -111,7 +113,7 @@ void GameApp::ProcessEvents()
 		{
 		case SDL_WINDOWEVENT:
 		{
-
+			// TODO: Handle window events.
 		}
 		break;
 		case SDL_QUIT:

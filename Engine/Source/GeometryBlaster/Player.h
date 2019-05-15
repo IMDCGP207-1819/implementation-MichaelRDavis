@@ -35,6 +35,7 @@ private:
 
 	int32_t m_lives;
 	int32_t m_maxLives;
+	Vec2 m_rotation;
 	float m_playerSpeed;
 	float m_fireRate;
 };

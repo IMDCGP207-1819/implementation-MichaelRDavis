@@ -45,9 +45,12 @@ void Player::Update(float deltaTime)
 
 	m_input->UpdateComponent(deltaTime);
 
-	//m_velocity = m_playerSpeed * m_input->m_gamepad->GetLeftThumbStick();
-	m_position += m_velocity;
-	// Clamp the player position to the game viewport
+	Vec2 position = GetPosition();
+	position += m_velocity * m_playerSpeed * deltaTime;
+	SetPosition(position);
+
+	float angle = atan2f(m_rotation.y, m_rotation.x);
+	SetRotation(angle);
 }
 
 void Player::Draw(SDL_Renderer* renderer)
