@@ -5,6 +5,7 @@
 #include "GameObject/Components/InputComponent.h"
 #include "Input/Gamepad.h"
 #include "Bullet.h"
+#include "Math/Math.h"
 
 Player::Player()
 {
@@ -18,7 +19,7 @@ Player::Player()
 	m_collision->SetOwner(this);
 	m_collision->SetRadius(5.0f);
 
-	m_playerSpeed = 400.0f;
+	m_playerSpeed = 3000.0f;
 	m_maxLives = 3;
 	m_lives = m_maxLives;
 }
@@ -48,14 +49,21 @@ void Player::Update(float deltaTime)
 	if (m_input->m_gamepad->GetIsConnected())
 	{
 		m_velocity = m_input->m_gamepad->GetLeftThumbStick();
+		//if (!Math::IsNearZero(m_input->m_gamepad->GetLeftThumbStick().Size()))
+		{
+			//m_rotation = m_input->m_gamepad->GetLeftThumbStick();
+		}
 	}
 
 	Vec2 position = GetPosition();
 	position += m_velocity * m_playerSpeed * deltaTime;
 	SetPosition(position);
-
-	float angle = atan2f(m_rotation.y, m_rotation.x);
-	SetRotation(angle);
+	if (m_velocity.Size() > 0)
+	{
+		m_rotation = m_velocity;
+		float angle = atan2f(m_rotation.y, m_rotation.x);
+		SetRotation(angle);
+	}
 }
 
 void Player::Draw(SDL_Renderer* renderer)
@@ -65,6 +73,16 @@ void Player::Draw(SDL_Renderer* renderer)
 	if (m_sprite)
 	{
 		m_sprite->Draw(renderer);
+	}
+}
+
+void Player::Fire()
+{
+	if (!GetIsDead())
+	{
+		m_bullet = std::make_unique<Bullet>();
+		// TODO: Fire bullets.
+		// TODO: Play fire sound.
 	}
 }
 

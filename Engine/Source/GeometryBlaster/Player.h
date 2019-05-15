@@ -17,6 +17,8 @@ public:
 	void Update(float deltaTime) override;
 	void Draw(SDL_Renderer* renderer) override;
 
+	void Fire();
+
 	void Destroy();
 
 	inline bool GetIsDead() const
