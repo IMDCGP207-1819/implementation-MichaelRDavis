@@ -18,6 +18,7 @@ Player::Player()
 	m_collision->SetOwner(this);
 	m_collision->SetRadius(5.0f);
 
+	m_playerSpeed = 400.0f;
 	m_maxLives = 3;
 	m_lives = m_maxLives;
 }
@@ -44,6 +45,10 @@ void Player::Update(float deltaTime)
 	Entity::Update(deltaTime);
 
 	m_input->UpdateComponent(deltaTime);
+	if (m_input->m_gamepad->GetIsConnected())
+	{
+		m_velocity = m_input->m_gamepad->GetLeftThumbStick();
+	}
 
 	Vec2 position = GetPosition();
 	position += m_velocity * m_playerSpeed * deltaTime;

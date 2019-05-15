@@ -9,7 +9,7 @@ int main()
 		game->Startup();
 		while (game->GetIsRunning())
 		{
-			float deltaTime = static_cast<float>(SDL_GetTicks());
+			float deltaTime = static_cast<float>(SDL_GetTicks() / 1000);
 			game->Update(deltaTime);
 		}
 		game->Shutdown();

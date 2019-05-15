@@ -31,4 +31,5 @@ void InputComponent::UpdateComponent(float deltaTime)
 	Component::UpdateComponent(deltaTime);
 
 	m_gamepad->PreUpdate();
+	m_gamepad->Update();
 }

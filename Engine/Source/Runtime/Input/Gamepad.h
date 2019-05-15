@@ -64,6 +64,12 @@ public:
 		return m_rightThumbstick;
 	}
 
+	/** Retunrs true if the gamepad is connected. */
+	inline bool GetIsConnected() const
+	{
+		return m_isConnected;
+	}
+
 private:
 	/** Pointer to the gamepad device. */
 	SDL_GameController* m_gamepad;

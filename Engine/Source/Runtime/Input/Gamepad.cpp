@@ -9,7 +9,6 @@ Gamepad::Gamepad()
 
 Gamepad::~Gamepad()
 {
-	Destroy();
 	m_gamepad = nullptr;
 }
 
