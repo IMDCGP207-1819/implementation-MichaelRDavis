@@ -12,3 +12,4 @@ Documentation is provided.
 * Davide Cleopsece, DC. (2014) *A Resource Manager for Game Assets* Available at: [Link](https://www.gamedev.net/articles/programming/general-and-gameplay-programming/a-resource-manager-for-game-assets-r3807/).
 * Tiago Costa, TC. (2013) *C++: Custom memory allocation* Available at: [Link](https://www.gamedev.net/articles/programming/general-and-gameplay-programming/c-custom-memory-allocation-r3010/).
 * Tobias Stein, TS. (2017) *The Entity-Component-System - C++ Game Design Pattern (Part 1)* Available at: [Link](https://www.gamedev.net/articles/programming/general-and-gameplay-programming/the-entity-component-system-c-game-design-pattern-part-1-r4803/).
+* Art Assets [Link](https://gamedevelopment.tutsplus.com/tutorials/make-a-neon-vector-shooter-in-xna-basic-gameplay--gamedev-9859).
