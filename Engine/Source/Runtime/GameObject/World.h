@@ -25,6 +25,8 @@ public:
 	/** Draw all game objects in the game world. */
 	void Draw(SDL_Renderer* renderer);
 
+	// TODO: Add world loading via JSON.
+
 private:
 	/** Pointer to the player object. */
 	std::unique_ptr<Player> m_player;

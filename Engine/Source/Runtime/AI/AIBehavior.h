@@ -5,7 +5,7 @@
 class Entity;
 
 /**
- * 
+ * AIBehvaior is a collection of all AI driven behaviors.
  */
 class AIBehavior
 {

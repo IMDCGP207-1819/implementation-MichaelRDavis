@@ -13,5 +13,5 @@ public:
 	~ComponentManager();
 
 private:
-	/**  */
+	// TODO: Map components here instead of inside the entity class.
 };

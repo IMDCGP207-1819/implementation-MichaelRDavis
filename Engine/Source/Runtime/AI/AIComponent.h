@@ -5,7 +5,7 @@
 class AIBehavior;
 
 /**
- * 
+ * AIComponent is attached to entities to give them AI driven behavior. 
  */
 class AIComponent : public Component
 {

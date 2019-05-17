@@ -1,7 +1,7 @@
 #pragma once
 
 /**
- * 
+ * AudioCue is used to play and control sounds. 
  */
 class AudioCue
 {

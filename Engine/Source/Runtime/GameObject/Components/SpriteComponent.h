@@ -56,27 +56,27 @@ public:
 	}
 
 private:
-	/**  */
+	/** Pointer to the texture asset for this sprite. */
 	std::shared_ptr<TextureAsset> m_textureAsset;
 
-	/**  */
+	/** Sprite texture. */
 	SDL_Texture* m_texture;
 
-	/**  */
+	/** Cached pointer to the renderer object. */
 	SDL_Renderer* m_renderer;
 
-	/**  */
+	/** Color of the sprite. */
 	SDL_Color m_color;
 
-	/**  */
+	/** Sprite draw order. */
 	int32_t m_spriteDrawOrder;
 
-	/**  */
+	/** Width of the sprite. */
 	int32_t m_spriteWidth;
 
-	/**  */
+	/** Height of the sprite. */
 	int32_t m_spriteHeight;
 
-	/**  */
+	/** The sprites name. */
 	std::string m_spriteName;
 };

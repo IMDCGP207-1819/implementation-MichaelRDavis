@@ -8,5 +8,6 @@ var searchData=
   ['interpolate',['Interpolate',['../class_gamepad.html#a60cd7249f68b8898173f3182d1570563',1,'Gamepad']]],
   ['intersect',['Intersect',['../class_collision_component.html#a612c1e5c553ef889ec5405bd236c4cef',1,'CollisionComponent']]],
   ['isbuttonpressed',['IsButtonPressed',['../class_gamepad.html#a247cbc78f48a4a87c95c5f4909b466c7',1,'Gamepad']]],
-  ['isbuttonreleased',['IsButtonReleased',['../class_gamepad.html#a1e0c5e44c5fa4a871eb1dcff1a47a44e',1,'Gamepad']]]
+  ['isbuttonreleased',['IsButtonReleased',['../class_gamepad.html#a1e0c5e44c5fa4a871eb1dcff1a47a44e',1,'Gamepad']]],
+  ['isnearzero',['IsNearZero',['../class_math.html#a390863eeb33d7fce8e7257169684845e',1,'Math']]]
 ];
